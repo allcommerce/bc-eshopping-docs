@@ -1,54 +1,59 @@
 # Setting Up the Home Page
 
-The eShopping home page is built from modular sections that you can toggle on or off and configure entirely from the **Theme Editor**. Each section is controlled by one or more `eshopping-*` settings in **Storefront > My Themes > Customize**.
+The eShopping home page is built from modular sections that you can turn on or off and customize entirely from the **Theme Editor**. No coding is required -- just toggle sections, enter your content, and save.
 
-<div class="placeholder-screenshot">Full home page overview showing all sections stacked vertically: hero carousel, trust strip, products-by-category tabs, brand logos, newsletter, social icons, SEO text block, and footer.</div>
+To open the Theme Editor, go to **Storefront > My Themes > Customize** in your BigCommerce admin panel.
+
+<div class="placeholder-screenshot">Full home page overview showing all sections stacked vertically: hero carousel, trust strip, products-by-category tabs, brand logos, newsletter, and footer.</div>
 
 ---
 
 ## Hero Carousel
 
-The hero carousel occupies the full width above the fold and rotates through promotional slides with a crossfade animation.
+The hero carousel is a full-width banner area at the top of your home page that rotates through promotional slides with a smooth crossfade animation.
 
-| Setting | Location | Value |
-|---------|----------|-------|
-| `eshopping-show-hero` | Theme Styles > Home Page | `true` / `false` |
+<div class="placeholder-screenshot">Hero carousel displaying a large promotional banner with heading text and a call-to-action button.</div>
 
-### How to configure
+### How to set it up
 
 1. In your BigCommerce admin, go to **Storefront > Home Page Carousel**.
-2. Upload carousel images and set the link URL, heading, and description for each slide.
-3. Open **Storefront > My Themes > Customize** (Theme Editor).
-4. Navigate to **Theme Styles > Home Page**.
-5. Enable **Show carousel** (`eshopping-show-hero`).
-
-<div class="placeholder-screenshot">Theme Editor with "Show carousel" toggle highlighted under Home Page section.</div>
+2. Upload your carousel images and fill in the heading, description, and link URL for each slide.
+3. Open the **Theme Editor** (**Storefront > My Themes > Customize**).
+4. Go to **Theme Styles** > **eShopping** > **Homepage Sections**.
+5. Check **Show Hero Carousel** to turn it on.
+6. Click **Save & Apply**.
 
 !!! tip
-    For best results, use images that are at least 1600px wide. The carousel uses `object-fit: cover`, so images will be cropped to fit the viewport width without causing layout shift.
+    For best results, use images that are at least 1600 pixels wide. Images are automatically cropped to fit the full width of the screen without causing any layout jump.
 
 ---
 
 ## Trust Strip
 
-The trust strip displays a row of trust badges directly below the hero carousel -- for example, "Made in USA", "Free Shipping", or "Expert Support".
+The trust strip is a row of badges displayed directly below the hero carousel. Use it to highlight key selling points like free shipping, satisfaction guarantees, customer ratings, or support hours.
 
-| Setting | Location | Value |
-|---------|----------|-------|
-| `eshopping-show-trust-strip` | Theme Styles > Home Page | `true` / `false` |
-| `eshopping-trust-text` | Theme Styles > Home Page | Pipe-separated string |
+<div class="placeholder-screenshot">Trust strip showing four badges in a horizontal row below the hero carousel, each with a bold title and supporting text.</div>
 
-### How it works
+### How to set it up
 
-The `eshopping-trust-text` setting is a single string where each badge is defined by a **Label** and **Subtitle** pair, separated by the pipe character `|`. You can have as many badges as you like -- each pair of segments becomes one badge.
+1. Open the **Theme Editor**.
+2. Go to **Theme Styles** > **eShopping** > **Homepage Sections**.
+3. Check **Show Trust Strip** to turn it on.
+4. Go to **Theme Styles** > **eShopping** > **Trust Strip**.
+5. In the **Trust Strip Items** field, enter your badges using the format below.
+6. Click **Save & Apply**.
+
+### Content format
+
+Enter your badges as a single line of text with each piece separated by a pipe character (`|`). Badges are defined in pairs: a **Title** followed by a **Subtitle**.
 
 **Format:**
 
 ```
-Label 1|Subtitle 1|Label 2|Subtitle 2|Label 3|Subtitle 3|Label 4|Subtitle 4
+Title 1|Subtitle 1|Title 2|Subtitle 2|Title 3|Subtitle 3
 ```
 
-**Default value (4 badges):**
+**Example (4 badges):**
 
 ```
 Made in USA|Fast & reliable shipping on all orders|Free Shipping|Shop with confidence, guaranteed|4.8 Star Rating|Easy returns within 30 days|Expert Support|Available Mon-Sat, 9am-6pm
@@ -56,249 +61,158 @@ Made in USA|Fast & reliable shipping on all orders|Free Shipping|Shop with confi
 
 This produces:
 
-| Badge | Label | Subtitle |
+| Badge | Title | Subtitle |
 |-------|-------|----------|
 | 1 | Made in USA | Fast & reliable shipping on all orders |
 | 2 | Free Shipping | Shop with confidence, guaranteed |
 | 3 | 4.8 Star Rating | Easy returns within 30 days |
 | 4 | Expert Support | Available Mon-Sat, 9am-6pm |
 
-<div class="placeholder-screenshot">Trust strip showing four badges in a horizontal row below the hero carousel.</div>
-
-### How to configure
-
-1. Open the **Theme Editor**.
-2. Navigate to **Theme Styles > Home Page**.
-3. Toggle **Show trust strip** on.
-4. Edit the **Trust strip text** field. Enter your badges as pipe-separated `Label|Subtitle` pairs.
-5. Click **Save & Apply**.
-
 !!! warning
-    Make sure you have an even number of pipe-separated segments. An odd number will cause the last badge to display without a subtitle.
+    Make sure you have an even number of items separated by pipes. If you have an odd number, the last badge will appear without a subtitle.
 
 ---
 
-## Products by Category / Tab Section (PBCST)
+## Products by Category Tabs
 
-This section displays products in a tabbed layout. Visitors can switch between tabs like "Featured", "Best Selling", and "New Arrivals" without a page reload. Products are fetched dynamically.
+This section displays your products in a tabbed layout on the home page. Visitors can switch between tabs like "Best Selling", "Featured", "New Arrivals", and "Top Rated" without reloading the page.
 
-| Setting | Location | Default |
-|---------|----------|---------|
-| `eshopping-pbcst-show-featured` | Theme Styles > Home Page | `true` |
-| `eshopping-pbcst-show-bestselling` | Theme Styles > Home Page | `true` |
-| `eshopping-pbcst-show-new` | Theme Styles > Home Page | `true` |
-| `eshopping-pbcst-show-reviews` | Theme Styles > Home Page | `false` |
-| `eshopping-pbcst-grid` | Theme Styles > Home Page | `3,4,6` |
-| `eshopping-pbcst-active` | Theme Styles > Home Page | `featured` |
-| `eshopping-pbcst-catIDs` | Theme Styles > Home Page | _(empty)_ |
-| `eshopping-pbcst-lazy` | Theme Styles > Home Page | `false` |
+<div class="placeholder-screenshot">Products-by-category section with a tab bar showing "Featured", "Best Selling", and "New Arrivals" tabs, with a product grid below.</div>
 
-<div class="placeholder-screenshot">Products-by-category section with tab bar showing "Featured", "Best Selling", and "New Arrivals" tabs, with a product grid below.</div>
+### How to set it up
 
-### Tab visibility
+1. Open the **Theme Editor**.
+2. Go to **Theme Styles** > **eShopping** > **Homepage Sections**.
+3. Check the product sections you want to display: **Show Featured Products**, **Show Best Sellers**, **Show New Arrivals**, and/or **Show Categories**.
+4. Go to **Theme Styles** > **eShopping** > **Products by Category** for additional options.
+5. Click **Save & Apply**.
 
-Each tab can be independently shown or hidden:
+### Choosing which tabs to show
 
-- **Featured** -- `eshopping-pbcst-show-featured`
-- **Best Selling** -- `eshopping-pbcst-show-bestselling`
-- **New Arrivals** -- `eshopping-pbcst-show-new`
-- **Top Reviewed** -- `eshopping-pbcst-show-reviews`
+Each tab can be turned on or off independently under **Theme Styles** > **eShopping** > **Products by Category**:
 
-### Grid columns
+- **Show Bestselling tab** -- Products that sell the most
+- **Show Featured tab** -- Products you have marked as featured
+- **Show New tab** -- Your newest products
+- **Show Reviews tab** -- Top-rated products by customer reviews
 
-The `eshopping-pbcst-grid` setting controls how many columns of products appear at each breakpoint. The value is three comma-separated numbers:
+### Setting the default active tab
+
+Under **Theme Styles** > **eShopping** > **Products by Category**, use the **Default active tab** dropdown to choose which tab is selected when the page first loads. Options are:
+
+- Bestselling
+- Featured
+- Newest
+- Top Rated
+
+### Grid layout
+
+The **Grid layout** field under **Theme Styles** > **eShopping** > **Products by Category** controls how many items appear. Enter three numbers separated by commas:
 
 ```
-desktop,tablet,mobile
+categories, products, subcategories
 ```
 
-For example, `3,4,6` means:
+For example, `3,4,6` means 3 categories, 4 products per category, and 6 subcategories.
 
-- **Desktop:** 3 products per row
-- **Tablet:** 4 products per row (narrower cards)
-- **Mobile:** 6 products in a scrollable row
+### Showing products from specific categories
 
-### Active tab
+By default, products are pulled from your homepage product settings in the BigCommerce admin.
 
-Set `eshopping-pbcst-active` to control which tab is selected by default when the page loads:
-
-- `featured` -- Featured products (default)
-- `bestselling` -- Best Selling products
-- `new` -- New Arrival products
-
-### Category filtering
-
-By default (when `eshopping-pbcst-catIDs` is empty), products are pulled from the homepage product settings in your BigCommerce admin.
-
-To display products from specific categories, enter a comma-separated list of **category IDs**:
+To show products from specific categories, enter the category IDs in the **Category IDs** field under **Theme Styles** > **eShopping** > **Products by Category**, separated by commas:
 
 ```
 23,45,67
 ```
 
 !!! tip "Finding a category ID"
-    In your BigCommerce admin, go to **Products > Product Categories** and click on a category. The category ID appears in the URL: `manage/products/categories/edit/**23**`.
+    In your BigCommerce admin, go to **Products > Product Categories** and click on a category. The category ID appears in the browser's address bar at the end of the URL.
 
-### Lazy loading
+### Lazy loading for faster pages
 
-When `eshopping-pbcst-lazy` is enabled, product data for non-active tabs is loaded on demand when the visitor clicks the tab, rather than on initial page load. This improves initial page speed.
+Check **Lazy load sections on scroll** under **Theme Styles** > **eShopping** > **Products by Category** to load product data only when visitors scroll down to that section. This makes your page load faster initially.
 
 ---
 
 ## Brand Logos
 
-Displays a horizontally scrollable row of brand logos sourced from your BigCommerce catalog.
+Displays a horizontally scrollable row of brand logos sourced from your product catalog.
 
-| Setting | Location | Default |
-|---------|----------|---------|
-| `eshopping-homepage-brands-limit` | Theme Styles > Home Page | `8` |
+<div class="placeholder-screenshot">Brand logos row showing several brand images in a horizontal scrollable strip.</div>
 
-<div class="placeholder-screenshot">Brand logos row showing 8 brand images in a horizontal scrollable strip.</div>
+### How to set it up
 
-### How to configure
-
-1. Ensure your products have brands assigned in **Products > Brands** in the BigCommerce admin.
-2. Upload brand images/logos for each brand.
-3. In the **Theme Editor**, set **Homepage brands limit** to control how many logos appear (default: 8).
+1. Make sure your products have brands assigned in **Products > Brands** in the BigCommerce admin, and that each brand has a logo image uploaded.
+2. Open the **Theme Editor**.
+3. Go to **Theme Styles** > **eShopping** > **Homepage Sections**.
+4. In the **Homepage Brands Limit** field, enter the maximum number of brand logos to display (for example, `8`).
+5. Click **Save & Apply**.
 
 ---
 
 ## Newsletter Section
 
-A call-to-action block encouraging visitors to subscribe to your newsletter.
+A call-to-action block that encourages visitors to subscribe to your email newsletter.
 
-| Setting | Location | Default |
-|---------|----------|---------|
-| `eshopping-show-newsletter` | Theme Styles > Home Page | `true` |
-| `eshopping-newsletter-text` | Theme Styles > Home Page | Pipe-separated string |
+<div class="placeholder-screenshot">Newsletter section showing a heading, subtitle text, and an email subscription form with a submit button.</div>
+
+### How to set it up
+
+1. Open the **Theme Editor**.
+2. Go to **Theme Styles** > **eShopping** > **Homepage Sections**.
+3. Check **Show Newsletter** to turn it on.
+4. In the **Newsletter Signup Text** field, enter your heading and subtitle separated by a pipe character (`|`).
+5. Click **Save & Apply**.
 
 ### Content format
-
-The `eshopping-newsletter-text` setting uses the same pipe-separated format:
 
 ```
 Heading|Subtitle
 ```
 
-HTML is supported in the heading for emphasis. For example:
-
-```
-Stay Updated with <em>Our Newsletter</em>|Product launches, field tips, and exclusive offers in your inbox.
-```
-
-This renders the heading with "Our Newsletter" in italic (styled as the accent/serif font).
-
-<div class="placeholder-screenshot">Newsletter section showing a heading, subtitle text, and an email subscription form.</div>
-
-### How to configure
-
-1. Open the **Theme Editor**.
-2. Navigate to **Theme Styles > Home Page**.
-3. Toggle **Show newsletter** on.
-4. Edit the **Newsletter text** field with your `Heading|Subtitle` content.
-5. Click **Save & Apply**.
-
-!!! note
-    The newsletter form connects to the email marketing provider configured in your BigCommerce admin under **Marketing > Email Marketing**.
-
----
-
-## Social Icons
-
-Displays a row of social media icons linking to your brand's social profiles.
-
-| Setting | Location | Default |
-|---------|----------|---------|
-| `eshopping-show-social-icons` | Theme Styles > Home Page | `true` |
-
-### How to configure
-
-1. In your BigCommerce admin, go to **Storefront > Social Media Links**.
-2. Enter the URLs for each social platform (Facebook, Instagram, Twitter/X, YouTube, Pinterest, etc.).
-3. In the **Theme Editor**, ensure **Show social icons** is enabled.
-
-Only platforms with a URL entered will display an icon.
-
-<div class="placeholder-screenshot">Social icons row showing icons for Facebook, Instagram, Twitter/X, and YouTube.</div>
-
----
-
-## SEO Text Block
-
-A text content block intended for search engine optimization. Displays a heading and one or more paragraphs of descriptive content about your store.
-
-| Setting | Location | Default |
-|---------|----------|---------|
-| `eshopping-show-seo` | Theme Styles > Home Page | `false` |
-| `eshopping-seo-text` | Theme Styles > Home Page | Pipe-separated string |
-
-### Content format
-
-```
-Heading|Paragraph 1|Paragraph 2
-```
-
-Each pipe-separated segment after the heading becomes a separate paragraph. HTML is supported.
-
 **Example:**
 
 ```
-Sampling & Testing Tools|Ever since 1942, we have been a leader in manufacturing soil sampling equipment for agricultural, geotechnical, environmental, and groundwater applications.|Our soil sampling equipment includes soil probes, soil augers, soil core samplers, and more. Browse our official online store today.
+Stay Updated with Our Newsletter|Product launches, tips, and exclusive offers delivered to your inbox.
 ```
 
-<div class="placeholder-screenshot">SEO text block showing a heading and two paragraphs of descriptive content near the bottom of the home page.</div>
+You can use basic HTML in the heading for emphasis. For example, wrapping words in `<em>` tags will display them in an elegant italic style:
 
-### How to configure
+```
+Stay Updated with <em>Our Newsletter</em>|Product launches, tips, and exclusive offers.
+```
 
-1. Open the **Theme Editor**.
-2. Navigate to **Theme Styles > Home Page**.
-3. Toggle **Show SEO text** on.
-4. Edit the **SEO text** field using the pipe-separated format.
-5. Click **Save & Apply**.
-
-!!! tip
-    Keep the SEO text relevant and natural. Search engines favor content that genuinely helps visitors understand what your store offers.
+!!! note
+    The newsletter form connects to the email marketing provider you have configured in your BigCommerce admin under **Marketing > Email Marketing**.
 
 ---
 
-## Additional Sections
-
-The following sections are available but **disabled by default**. Enable them in **Theme Styles > Home Page** as needed.
-
-| Section | Setting | Description |
-|---------|---------|-------------|
-| **CTA Bar** | `eshopping-show-cta` | A prominent call-to-action banner with a button |
-| **Why Choose Us** | `eshopping-show-why` | Feature highlight cards explaining your value proposition |
-| **Reviews** | `eshopping-show-reviews` | Customer review/testimonial carousel |
-| **Resources** | `eshopping-show-resources` | Links to blog posts, guides, or downloadable resources |
-
-<div class="placeholder-screenshot">Theme Editor toggles for CTA Bar, Why Choose Us, Reviews, and Resources sections -- all shown in the off position.</div>
-
-To enable any of these sections:
-
-1. Open the **Theme Editor**.
-2. Navigate to **Theme Styles > Home Page**.
-3. Toggle the desired section on.
-4. Configure any associated content fields that appear.
-5. Click **Save & Apply**.
-
----
-
-## Section Order
+## Section Display Order
 
 Sections appear on the home page in this fixed order from top to bottom:
 
 1. Hero Carousel
 2. Trust Strip
 3. Products by Category Tabs
-4. CTA Bar _(off by default)_
-5. Why Choose Us _(off by default)_
-6. Brand Logos
-7. Reviews _(off by default)_
-8. Resources _(off by default)_
-9. Newsletter
-10. Social Icons
-11. SEO Text Block
+4. Brand Logos
+5. Newsletter
+6. Footer
+
+Any section that is turned off is simply skipped -- the remaining sections stack together seamlessly.
 
 !!! info
-    Section order cannot be changed from the Theme Editor. If you need a custom section order, contact your developer or see the [Customization Guide](../customization/presets.md).
+    The order of sections cannot be rearranged from the Theme Editor. If you need a custom layout, contact your theme developer.
+
+---
+
+## Quick Setup Checklist
+
+Here is a summary of where to find each homepage setting:
+
+| Section | Theme Editor Path | Key Settings |
+|---------|-------------------|--------------|
+| Hero Carousel | **eShopping** > **Homepage Sections** | **Show Hero Carousel** |
+| Trust Strip | **eShopping** > **Homepage Sections** + **Trust Strip** | **Show Trust Strip**, **Trust Strip Items** |
+| Products by Category | **eShopping** > **Homepage Sections** + **Products by Category** | Tab visibility, **Grid layout**, **Category IDs**, **Default active tab** |
+| Brand Logos | **eShopping** > **Homepage Sections** | **Homepage Brands Limit** |
+| Newsletter | **eShopping** > **Homepage Sections** | **Show Newsletter**, **Newsletter Signup Text** |

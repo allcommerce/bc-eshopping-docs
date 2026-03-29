@@ -4,89 +4,84 @@ title: Customizing Colors
 
 # Customizing Colors
 
-All colors in the eShopping theme use **design tokens** configured through Theme Editor. Navigate to **Theme Styles** > **eShopping** > **Colors** to customize every color on your storefront without touching code.
+Every color in the eShopping theme can be changed directly from the Theme Editor --- no coding required. The theme organizes colors into intuitive groups so you can quickly match your store to your brand.
 
-<div class="placeholder-screenshot">Theme Editor Colors panel showing the eShopping color settings with swatches for bark, terra, forest, and base colors</div>
+To get started, go to **Theme Styles** > **eShopping** > **Colors**.
 
----
-
-## Color Palettes
-
-### Bark Scale (Neutrals)
-
-A 10-level neutral scale from light to dark, used for backgrounds, text, borders, and muted elements.
-
-| Setting ID | Role | Default |
-|-----------|------|---------|
-| `eshopping-color-bark-50` | Lightest neutral (subtle backgrounds) | `#f5f3ef` |
-| `eshopping-color-bark-100` | Light neutral | |
-| `eshopping-color-bark-200` | Border, divider lines | |
-| `eshopping-color-bark-300` | Muted text, placeholders | |
-| `eshopping-color-bark-400` | Secondary text | |
-| `eshopping-color-bark-500` | Mid-tone neutral | |
-| `eshopping-color-bark-600` | Body text | |
-| `eshopping-color-bark-700` | Strong text | |
-| `eshopping-color-bark-800` | Heading text | |
-| `eshopping-color-bark-900` | Near-black | |
-| `eshopping-color-bark-950` | Darkest neutral | `#0f0d0a` |
-
-!!! tip
-    Adjusting the bark scale changes the overall warmth or coolness of your store. The [Industry Presets](presets.md) each use a different neutral family --- warm bark (Industrial), slate (AutoParts), stone (Packaging), or zinc (Electronics).
+<div class="placeholder-screenshot">Theme Editor Colors panel showing the eShopping color settings with color picker swatches organized by group</div>
 
 ---
 
-### Terra (Primary Accent)
+## Understanding the Color Groups
 
-Four shades of the primary brand color, used for buttons, links, highlights, and interactive elements.
+The eShopping theme uses four color groups that work together to create a cohesive look across your entire store.
 
-| Setting ID | Role | Default |
-|-----------|------|---------|
-| `eshopping-color-terra` | Main accent (buttons, links, highlights) | `#bf5b33` |
-| `eshopping-color-terra-light` | Hover states, secondary highlights | |
-| `eshopping-color-terra-dark` | Active states, emphasis | |
-| `eshopping-color-terra-pale` | Subtle backgrounds, badges | |
+### Terra --- Your Primary Brand Color
 
-<div class="placeholder-screenshot">Close-up of buttons and links showing the four terra shades in use: main, light (hover), dark (active), and pale (badge background)</div>
+Terra is the **main accent color** that defines the personality of your store. It appears on buttons, links, highlights, active states, and calls to action throughout the site.
 
----
+You get **4 shades** to work with:
 
-### Forest (Secondary Accent)
+- **Terra** --- The primary shade, used for buttons, links, and key interactive elements
+- **Terra Dark** --- A deeper version, used for active/pressed states and emphasis
+- **Terra Light** --- A lighter version, used for hover effects and secondary highlights
+- **Terra Pale** --- A very soft tint, used for subtle backgrounds and badge fills
 
-Six shades for success states, stock indicators, and secondary accents.
+<div class="placeholder-screenshot">Close-up of buttons and links showing the four Terra shades in use: main button, hover state, active state, and a pale badge background</div>
 
-| Setting ID | Role |
-|-----------|------|
-| `eshopping-color-forest-50` | Lightest green (success backgrounds) |
-| `eshopping-color-forest-100` | Light green |
-| `eshopping-color-forest-200` | Borders, subtle accents |
-| `eshopping-color-forest-500` | Mid-tone green |
-| `eshopping-color-forest-700` | In-stock badges, success text |
-| `eshopping-color-forest-900` | Dark green (emphasis) |
-
-**Common uses:** "In Stock" badges, success messages, eco-themed promotional elements, add-to-cart confirmations.
+!!! tip "Start with Terra"
+    Changing just the main Terra color is the fastest way to make the theme feel like your brand. The three supporting shades (Dark, Light, Pale) let you fine-tune the look.
 
 ---
 
-### Base Colors
+### Forest --- Secondary Green Accent
 
-| Setting ID | Role | Default |
-|-----------|------|---------|
-| `eshopping-color-cream` | Off-white page background | `#faf8f4` |
-| `eshopping-color-white` | Pure white (cards, modals) | `#ffffff` |
+Forest provides a range of **green tones** used for positive feedback and secondary accents across your store. You will see Forest colors on:
+
+- "In Stock" badges
+- Success messages (e.g., "Item added to cart")
+- Add-to-cart confirmations
+- Eco or sustainability-themed promotional elements
+
+The Theme Editor offers **6 green shades** from very light to very dark, giving you full control over how greens appear on your site.
 
 ---
 
-## Component Colors
+### Bark --- Neutral Tones
 
-Beyond the global palette, the theme exposes color settings for specific UI components. These let you fine-tune individual sections without affecting the rest of the store.
+Bark is your **neutral color scale** --- the backbone of your store's visual design. These 10 shades (from near-white to near-black) control:
+
+- **Page backgrounds** (lightest shades)
+- **Borders and divider lines** (light-to-mid shades)
+- **Placeholder text and secondary text** (mid shades)
+- **Body text** (mid-to-dark shades)
+- **Headings and strong text** (darkest shades)
+
+!!! tip "Warm vs. cool"
+    The Bark scale determines the overall warmth or coolness of your store. Each [Industry Preset](presets.md) uses a different neutral family --- warm browns (Industrial), cool slates (AutoParts), warm stones (Packaging), or cool zincs (Electronics). You can customize these to match your brand's personality.
+
+---
+
+### Cream and White --- Page Backgrounds
+
+These two base colors set the foundation for your store:
+
+- **Cream** --- A soft off-white used as the main page background, giving the store a warm, inviting feel
+- **White** --- Pure white used for cards, modals, popups, and content areas that need to stand out from the page background
+
+---
+
+## Component-Specific Colors
+
+Beyond the global color palette, several key areas of your store have their own dedicated color settings. This lets you style individual sections independently.
 
 ### Top Bar
 
-| Setting ID | Controls |
-|-----------|----------|
-| `eshopping-topbar-bg` | Background color |
-| `eshopping-topbar-color` | Text color |
-| `eshopping-topbar-color-hover` | Hover text color |
+The thin bar at the very top of your store (above the main navigation). Customize its colors in **Theme Styles** > **eShopping** > **Header** under the **Topbar** section:
+
+- **Background** --- The bar's background color
+- **Text Color** --- The default text color
+- **Hover Color** --- The color text changes to when a customer hovers over it
 
 <div class="placeholder-screenshot">Top bar component with labels pointing to the background, text, and hover text color areas</div>
 
@@ -94,14 +89,14 @@ Beyond the global palette, the theme exposes color settings for specific UI comp
 
 ### Main Navigation
 
-| Setting ID | Controls |
-|-----------|----------|
-| `eshopping-nav-bg` | Background color |
-| `eshopping-nav-color` | Text color |
-| `eshopping-nav-color-hover` | Hover text color |
-| `eshopping-nav-search-bg` | Search bar background |
-| `eshopping-nav-search-color` | Search input text color |
-| `eshopping-nav-search-btn` | Search button color |
+The primary navigation bar with your logo, menu links, and search bar. Customize in **Theme Styles** > **eShopping** > **Header** under the **Navigation** section:
+
+- **Background** --- The navigation bar's background color
+- **Text Color** --- Navigation link text color
+- **Hover Color** --- The color links change to on hover
+- **Search Bar Background** --- The search input field's background
+- **Search Text Color** --- The text color inside the search field
+- **Search Button Color** --- The color of the search submit button
 
 <div class="placeholder-screenshot">Main navigation bar with labels pointing to the background, nav links, search bar, and search button color areas</div>
 
@@ -109,32 +104,27 @@ Beyond the global palette, the theme exposes color settings for specific UI comp
 
 ### Footer
 
-| Setting ID | Controls |
-|-----------|----------|
-| `eshopping-footer-bg` | Background color |
-| `eshopping-footer-color` | Body text color |
-| `eshopping-footer-heading` | Section heading color |
-| `eshopping-footer-link` | Link color |
-| `eshopping-footer-link-hover` | Link hover color |
-| `eshopping-footer-border` | Separator border color |
+The bottom section of every page. Customize in **Theme Styles** > **eShopping** > **Footer**:
+
+- **Background** --- The footer's background color
+- **Text Color** --- General body text color in the footer
+- **Heading Color** --- The color of section headings (e.g., "Customer Service", "About Us")
+- **Link Color** --- The color of clickable links
+- **Link Hover Color** --- The color links change to on hover
+- **Border Color** --- The color of separator lines between footer sections
 
 <div class="placeholder-screenshot">Footer component with labels pointing to the background, heading, body text, link, and border color areas</div>
 
 ---
 
-## How Colors Flow Through the Theme
+## How to Change Colors
 
-```
-config.json          Theme Editor           SCSS                    CSS
-─────────────   ───────────────────   ──────────────────   ──────────────────
-Default value → Merchant overrides → stencilColor()     → --eshopping-*
-                                      (design tokens)     (CSS custom props)
-```
+1. Go to **Storefront** > **My Themes** and click **Customize**.
+2. In the left panel, navigate to **Theme Styles** > **eShopping** > **Colors**.
+3. Click any color swatch to open the color picker.
+4. Choose your new color, or paste in a specific color code if your brand guidelines provide one.
+5. The preview on the right updates in real time so you can see how it looks.
+6. Click **Save** when you are happy with the result.
 
-1. **config.json** defines the default hex value for each color setting.
-2. **Theme Editor** lets merchants override any color with a color picker.
-3. **SCSS** reads the value via `stencilColor('eshopping-color-terra')` and outputs it as a CSS custom property (`--eshopping-terra`).
-4. **Components** reference the CSS custom property, so every element updates automatically when a color changes.
-
-!!! warning "Never hardcode colors"
-    All colors in templates and SCSS must use design tokens (`stencilColor()` in SCSS, `var(--eshopping-*)` in CSS). Hardcoded hex, RGB, or HSL values will not respond to Theme Editor changes and will fail code review.
+!!! tip "Use a preset as your starting point"
+    If you are not sure where to begin, start by applying an [Industry Preset](presets.md) that is closest to your brand, then adjust individual colors from there.

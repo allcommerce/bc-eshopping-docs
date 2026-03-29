@@ -1,21 +1,35 @@
-# How to update eShopping theme
+# How to Update the eShopping Theme
 
-Log into your admin panel, go to **Storefront** > **My Themes** > click **Update Available** button appears on the theme thumbnail.
+When a new version of the eShopping theme is available, you will see an update notification in your admin panel.
 
+## Updating the Theme
 
-## Update a customized (or edited theme files) theme
+1. Log in to your BigCommerce admin panel.
+2. Go to **Storefront** > **My Themes**.
+3. Look for the **Update Available** button on the eShopping theme thumbnail.
+4. Click the button and follow the prompts to install the update.
 
-If your theme files have been edited and you are not using the original theme, you need to update the original theme and redo your customization on the new updated theme again.
+---
 
-1. Click Update button on the original theme to update your original theme.
-2. Make a copy of the new updated theme in order to edit theme files.
-3. Redo your customization or migrate your custom code to the new copied theme.
-4. Verify the new theme work properly in the preview.
-5. Apply your new theme to live.
+## Updating a Customized Theme
 
+If your theme files have been edited by a developer (not just settings changed in the Theme Editor), the original theme must be updated separately and your customizations reapplied:
 
-## How to revert the earlier version
+1. Click **Update** on the original (unmodified) eShopping theme to install the latest version.
+2. Make a copy of the newly updated theme so you can apply your customizations to it.
+3. Redo your customizations or have your developer migrate the custom code to the new copy.
+4. Preview the new theme to verify everything works correctly.
+5. Apply the new theme to your live store.
 
-To restore the earlier version, Check this [instruction](https://support.bigcommerce.com/s/article/Marketplace-Theme-Updates#restore) or watch the video below:
+!!! tip
+    If you only changed settings through the Theme Editor (colors, fonts, toggles, etc.) and never edited the theme's source files, a standard update will keep all your settings intact.
+
+---
+
+## Reverting to an Earlier Version
+
+If you need to restore a previous version of the theme, follow BigCommerce's official instructions: [How to Restore a Previous Theme Version](https://support.bigcommerce.com/s/article/Marketplace-Theme-Updates#restore).
+
+You can also watch this walkthrough video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eZdmudDUrQE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -1,152 +1,122 @@
 # Configuring the Sidebar
 
-The eShopping sidebar provides category navigation, faceted filters, and an optional promotional card. It appears on **category**, **brand**, and **search** pages automatically.
+The eShopping sidebar helps visitors browse and filter your products. It appears automatically on **category**, **brand**, and **search results** pages and includes a category tree, product filters, and an optional promotional card.
 
-<div class="placeholder-screenshot">Category page showing the 280px sidebar on the left with category tree, filters, and promo card, and the product grid on the right.</div>
+<div class="placeholder-screenshot">Category page showing the sidebar on the left with a category tree, product filters, and a promotional card, and the product grid on the right.</div>
 
 ---
 
 ## Overview
 
-| Property | Value |
-|----------|-------|
-| **Width** | 280px (fixed) |
-| **Position** | Sticky (scrolls with the page, stays visible) |
-| **Pages** | Category, Brand, Search |
-| **Mobile** | Converts to a bottom sheet overlay |
+The sidebar is a key navigation element of the eShopping theme:
 
-The sidebar is always visible on desktop for the pages listed above. It cannot be toggled off entirely -- it is a core navigation element of the eShopping layout.
+- **Desktop:** The sidebar is always visible on the left side of category, brand, and search pages. It stays in view as visitors scroll.
+- **Mobile:** The sidebar converts to a slide-up panel that visitors can open and close with a tap (see [Mobile Behavior](#mobile-behavior) below).
 
 ---
 
 ## Category Tree
 
-The category tree displays your store's product category hierarchy, allowing visitors to browse and drill down into subcategories.
+The category tree displays your store's product categories in a collapsible hierarchy, making it easy for visitors to browse and drill down into subcategories.
 
-| Setting | Location | Default | Purpose |
-|---------|----------|---------|---------|
-| `eshopping-sidebar-depth` | Theme Styles > Sidebar | `3` | Number of subcategory levels to display |
-| `eshopping-sidebar-auto-expand` | Theme Styles > Sidebar | `true` | Auto-expand the current category path |
+<div class="placeholder-screenshot">Sidebar category tree with three levels expanded, showing the current category highlighted with bold text.</div>
 
-### Depth
-
-The `eshopping-sidebar-depth` setting controls how many levels of the category tree are rendered:
-
-- **1** -- Top-level categories only
-- **2** -- Top-level + one level of subcategories
-- **3** -- Three levels deep (default)
-
-Categories deeper than the configured depth are not displayed in the sidebar tree. Visitors can still access them by navigating into a parent category.
-
-### Auto-expand
-
-When `eshopping-sidebar-auto-expand` is enabled, the sidebar automatically expands the tree to reveal the current page's category. For example, if a visitor is on the "Cordless Drills" category page (nested under "Power Tools > Drills"), the tree expands to show the full path:
+When a visitor is browsing a category page, the tree automatically expands to show where they are. For example, if they are viewing "Cordless Drills" nested under "Power Tools > Drills", the tree opens to reveal the full path:
 
 ```
 Power Tools
-  └─ Drills
-       └─ Cordless Drills  ← current page (highlighted)
+  +-- Drills
+       +-- Cordless Drills  (current page, highlighted)
 ```
-
-When disabled, all categories start in a collapsed state and visitors must manually click to expand each level.
-
-<div class="placeholder-screenshot">Sidebar category tree with three levels expanded, showing the current category highlighted with a bold style.</div>
 
 ### How to configure
 
-1. Open the **Theme Editor** (**Storefront > My Themes > Customize**).
-2. Navigate to **Theme Styles > Sidebar**.
-3. Set **Category tree depth** to the desired number of levels (1--3).
-4. Toggle **Auto-expand current category** on or off.
-5. Click **Save & Apply**.
+The category tree works automatically based on the categories you have created in **Products > Product Categories** in your BigCommerce admin. To organize or reorder your categories, manage them from that admin section.
 
 ---
 
-## Faceted Filters
+## Product Filters (Faceted Search)
 
-When faceted search is enabled in your BigCommerce admin, filter groups (price, brand, rating, custom fields, etc.) appear in the sidebar below the category tree.
+When faceted search is enabled in your BigCommerce admin, filter groups appear in the sidebar below the category tree. Visitors can narrow down products by price, brand, rating, product options, and custom fields.
 
-<div class="placeholder-screenshot">Sidebar filter groups showing Price range slider, Brand checkboxes, and Rating stars filter.</div>
+<div class="placeholder-screenshot">Sidebar filter groups showing a price range slider, brand checkboxes, and a star rating filter.</div>
 
-### Enabling faceted search
+### How to enable product filters
 
 1. In your BigCommerce admin, go to **Products > Product Filtering**.
-2. Enable the filters you want to display (price, brand, rating, product options, custom fields).
-3. Configure the display style (checkboxes, sliders, swatches) for each filter.
+2. Turn on the filters you want to display (price, brand, rating, product options, custom fields).
+3. Configure how each filter appears (checkboxes, sliders, swatches, etc.).
 
-The eShopping theme automatically renders these filters in the sidebar with styles matching the theme's design tokens. No additional theme settings are needed.
+The eShopping theme automatically styles these filters to match your store's design. No additional theme settings are needed.
 
 !!! tip
-    On category pages with many filters, the sidebar becomes scrollable independently of the main content, ensuring filters are always accessible.
+    On pages with many filters, the sidebar scrolls independently from the main product grid, so filters are always within easy reach.
 
 ---
 
 ## Promotional Card
 
-The sidebar includes an optional promotional card that can display a marketing message with a call-to-action button.
+The sidebar includes a built-in promotional card that you can use to highlight a special offer, shipping threshold, seasonal sale, or any other message. It appears below the filters and includes a heading, description, and a call-to-action button.
 
-| Setting | Location | Default |
-|---------|----------|---------|
-| `eshopping-promo-text` | Theme Styles > Sidebar | Pipe-separated string |
+<div class="placeholder-screenshot">Sidebar promotional card showing a "Free Shipping $500+" heading, a short description, and a "Shop Now" button.</div>
+
+### How to set it up
+
+1. Open the **Theme Editor** (**Storefront > My Themes > Customize**).
+2. Go to **Theme Styles** > **eShopping** > **Sidebar** > **Sidebar Promo Card**.
+3. In the **Sidebar Promo Text** field, enter your content using the format below.
+4. Click **Save & Apply**.
 
 ### Content format
 
-The `eshopping-promo-text` setting is a pipe-separated string with four segments:
+Enter four pieces of information separated by pipe characters (`|`):
 
 ```
-Title|Description|CTA Text|URL
+Title|Description|Button Text|Button Link
 ```
 
-| Segment | Purpose | Example |
-|---------|---------|---------|
-| Title | Bold heading text | `Free Shipping $500+` |
-| Description | Supporting message | `Free ground shipping on qualifying orders.` |
-| CTA Text | Button label | `Shop Now` |
-| URL | Button link destination | `/shipping/` |
+| Piece | What it is | Example |
+|-------|-----------|---------|
+| Title | The bold heading | `Free Shipping $500+` |
+| Description | Supporting text below the heading | `Free ground shipping on qualifying orders.` |
+| Button Text | The label on the call-to-action button | `Shop Now` |
+| Button Link | Where the button takes visitors | `/shipping/` |
 
-**Default value:**
+**Example:**
 
 ```
 Free Shipping $500+|Free ground shipping on qualifying orders.|Shop Now|/shipping/
 ```
 
-<div class="placeholder-screenshot">Sidebar promotional card showing "Free Shipping $500+" heading, description text, and a "Shop Now" button.</div>
-
-### How to configure
-
-1. Open the **Theme Editor**.
-2. Navigate to **Theme Styles > Sidebar**.
-3. Edit the **Promo text** field using the four-segment pipe-separated format.
-4. Click **Save & Apply**.
-
-To hide the promo card, clear the `eshopping-promo-text` field entirely (leave it blank).
+To hide the promotional card, clear the **Sidebar Promo Text** field entirely (leave it blank).
 
 !!! tip
-    Use the promo card for shipping thresholds, seasonal sales, or clearance announcements. The URL can point to any page -- a category, a CMS page, or an external link.
+    The button link can point to anything -- a category page, a custom web page, or even an external URL. Great uses include free shipping thresholds, clearance sales, or new arrivals.
 
 ---
 
 ## Mobile Behavior
 
-On screens below 801px, the sidebar is not visible by default. Instead, it transforms into a **bottom sheet overlay** that slides up from the bottom of the screen.
+On phones and small tablets, the sidebar is hidden by default to give products more screen space. Instead, it becomes a **slide-up panel** (bottom sheet) that visitors can open and close.
 
-<div class="placeholder-screenshot">Mobile bottom sheet overlay showing the category tree and filter options sliding up from the bottom of the screen.</div>
+<div class="placeholder-screenshot">Mobile bottom sheet panel sliding up from the bottom of the screen, showing the category tree, product filters, and promotional card.</div>
 
 ### How it works
 
-1. A **filter button** appears in the mobile toolbar above the product grid.
-2. Tapping the button opens the bottom sheet with the full sidebar content -- category tree, filters, and promo card.
-3. Visitors can scroll within the sheet, apply filters, and tap outside or press the close button to dismiss it.
-4. Applied filters appear as **active chips** above the product grid, allowing visitors to remove individual filters without reopening the sheet.
+1. A **Filter** button appears in the toolbar above the product grid on mobile.
+2. Tapping the button slides up a panel containing the full sidebar -- category tree, filters, and promotional card.
+3. Visitors can scroll through the panel, select filters, and tap outside the panel or press the close button to dismiss it.
+4. Any active filters appear as small **chips** above the product grid, so visitors can see and remove individual filters without reopening the panel.
 
-No additional settings are needed for mobile behavior. The bottom sheet is enabled automatically when the viewport width is below the desktop breakpoint.
+No additional settings are needed -- the mobile layout adapts automatically based on screen size.
 
 ---
 
-## Quick Reference
+## Quick Setup Checklist
 
-| Setting | Default | Description |
-|---------|---------|-------------|
-| `eshopping-sidebar-depth` | `3` | Category tree nesting depth (1--3 levels) |
-| `eshopping-sidebar-auto-expand` | `true` | Auto-expand tree to current category |
-| `eshopping-promo-text` | `Free Shipping $500+\|...\|Shop Now\|/shipping/` | Promotional card content (4 pipe-separated segments) |
+| Feature | Theme Editor Path | What to do |
+|---------|-------------------|------------|
+| Category Tree | _(automatic)_ | Manage your categories in **Products > Product Categories** in the BigCommerce admin |
+| Product Filters | _(automatic)_ | Enable filters in **Products > Product Filtering** in the BigCommerce admin |
+| Promotional Card | **eShopping** > **Sidebar** > **Sidebar Promo Card** | Enter your content in the **Sidebar Promo Text** field |
+| Mobile Panel | _(automatic)_ | No setup needed -- adapts to small screens automatically |

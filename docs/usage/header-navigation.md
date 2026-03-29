@@ -1,241 +1,237 @@
 # Customizing the Header & Navigation
 
-The eShopping header consists of two sticky bars -- the **Top Bar** (54px) and the **Main Navigation** (52px) -- that remain visible as visitors scroll. Both bars are fully configurable from the Theme Editor.
+The eShopping header has two bars that stay visible as visitors scroll your store:
 
-<div class="placeholder-screenshot">Full header showing the dark top bar with utility links and the white main navigation bar with logo, search, and cart icons.</div>
+- **Top Bar** -- A slim utility bar at the very top with store info, welcome messages, and page links.
+- **Main Navigation** -- The primary bar with your logo, category links, search, account icon, and cart.
+
+Both are fully customizable from the **Theme Editor** (**Storefront > My Themes > Customize**).
+
+<div class="placeholder-screenshot">Full header showing the dark top bar with store info and utility links, and the white main navigation bar with logo, category links, search bar, and cart icon.</div>
 
 ---
 
 ## Top Bar
 
-The top bar sits at the very top of every page. It displays utility information such as your store address, phone number, welcome message, and links to informational pages.
-
-### Color settings
-
-| Setting | Location | Default | Purpose |
-|---------|----------|---------|---------|
-| `eshopping-topbar-bg` | Theme Styles > Header | `#1a1713` | Background color |
-| `eshopping-topbar-color` | Theme Styles > Header | `#978a74` | Text and link color |
-| `eshopping-topbar-color-hover` | Theme Styles > Header | `#faf8f4` | Link hover color |
-
-<div class="placeholder-screenshot">Theme Editor color pickers for top bar background, text color, and hover color.</div>
-
-### Content toggles
-
-| Setting | Location | Default | Purpose |
-|---------|----------|---------|---------|
-| `eshopping-topbar-show-address` | Theme Styles > Header | `true` | Show store address |
-| `eshopping-topbar-show-phone` | Theme Styles > Header | `true` | Show phone number |
-| `eshopping-welcome-text` | Theme Styles > Header | _(empty)_ | Custom welcome message |
-
-- **Address and phone** are pulled from your BigCommerce store profile (**Settings > Store Profile**).
-- **Welcome text** accepts a custom message. Leave it blank to hide the welcome message entirely.
-
-### Page links
-
-| Setting | Location | Default | Purpose |
-|---------|----------|---------|---------|
-| `eshopping-topbar-pages-range` | Theme Styles > Header | `6,8` | Which web pages to show |
-
-The `eshopping-topbar-pages-range` setting controls which **web pages** (created in **Storefront > Web Pages**) appear as links in the top bar. The value is two comma-separated numbers:
-
-```
-start_index,limit
-```
-
-For example, `6,8` means: starting from the 7th web page (index 6, zero-based), show up to 8 pages.
-
-This lets you split your web pages between the top bar and main navigation. Informational pages like "About Us", "Contact", "FAQs", and "Shipping Policy" are good candidates for the top bar.
-
-!!! tip
-    The page order matches the sort order you set in **Storefront > Web Pages**. Drag pages into the desired order there, then use the range setting to select which ones appear in the top bar.
+The top bar sits at the very top of every page. It can display your store address, phone number, a welcome message, social media icons, and links to informational pages.
 
 <div class="placeholder-screenshot">Top bar showing store address on the left, welcome message in the center, and page links (About, Contact, FAQ) on the right.</div>
 
-### How to configure
+### Colors
+
+You can set the top bar colors to match your brand. Go to **Theme Styles** > **eShopping** > **Header** > **Topbar**:
+
+| Setting | What it controls |
+|---------|-----------------|
+| **Topbar Background** | Background color of the entire bar |
+| **Topbar Text** | Color of text and links |
+| **Topbar Text Hover** | Color when hovering over a link |
+
+### Content options
+
+Under **Theme Styles** > **eShopping** > **Header** > **Topbar**, you can control what appears in the top bar:
+
+| Setting | What it does |
+|---------|-------------|
+| **Show Social Icons** | Displays icons linking to your social media profiles |
+| **Show Address in Topbar** | Shows your store's physical address |
+| **Show Phone in Topbar** | Shows your store's phone number |
+| **Welcome Text** | A custom greeting message (leave blank to hide) |
+
+!!! note
+    Your store address and phone number are pulled from **Settings > Store Profile** in your BigCommerce admin. Update them there if they need to change.
+
+### Page links in the top bar
+
+The **Topbar pages range** field controls which of your web pages appear as links in the top bar.
+
+Enter two numbers separated by a comma: the starting position and how many pages to show. Pages are numbered starting from 0.
+
+```
+start,count
+```
+
+**Example:** `6,8` means start at the 7th page (position 6) and show up to 8 pages.
+
+This lets you split your web pages between the top bar and the main navigation. Good candidates for the top bar include "About Us", "Contact", "FAQ", and "Shipping Policy".
+
+!!! tip
+    The page order matches the sort order you set in **Storefront > Web Pages** in your BigCommerce admin. Drag pages into the order you want there, then use the range setting to pick which ones appear in the top bar.
+
+### How to configure the top bar
 
 1. Open the **Theme Editor** (**Storefront > My Themes > Customize**).
-2. Navigate to **Theme Styles > Header**.
-3. Set the **Top bar background** color and **text/hover colors** to match your brand.
-4. Toggle **Show address** and **Show phone** as needed.
-5. Enter a **Welcome text** message, or leave blank to hide.
-6. Adjust **Top bar pages range** to control which web pages appear.
+2. Go to **Theme Styles** > **eShopping** > **Header** > **Topbar**.
+3. Set the **Topbar Background**, **Topbar Text**, and **Topbar Text Hover** colors to match your brand.
+4. Check or uncheck **Show Social Icons**, **Show Address in Topbar**, and **Show Phone in Topbar** as needed.
+5. Enter a **Welcome Text** message, or leave it blank to hide the greeting.
+6. Adjust the **Topbar pages range** to control which web pages appear.
 7. Click **Save & Apply**.
 
 ---
 
 ## Main Navigation
 
-The main navigation bar sits directly below the top bar. It contains your store logo, category navigation links, the search bar, and action icons (account, cart).
+The main navigation bar sits directly below the top bar. It contains your store logo, product category links, the search bar, and icons for your account and cart.
 
-### Color settings
+<div class="placeholder-screenshot">Main navigation bar showing the logo on the left, category links in the center, and search/account/cart icons on the right.</div>
 
-| Setting | Location | Default | Purpose |
-|---------|----------|---------|---------|
-| `eshopping-nav-bg` | Theme Styles > Header | `#ffffff` | Navigation background color |
-| `eshopping-nav-color` | Theme Styles > Header | `#6b5e4f` | Navigation link color |
-| `eshopping-nav-color-hover` | Theme Styles > Header | `#1a1713` | Navigation link hover color |
+### Colors
 
-### Category navigation
+Go to **Theme Styles** > **eShopping** > **Header** > **Navigation**:
 
-| Setting | Location | Default | Purpose |
-|---------|----------|---------|---------|
-| `eshopping-nav-pages-range` | Theme Styles > Header | `0,6` | Which categories to show |
+| Setting | What it controls |
+|---------|-----------------|
+| **Navigation Background** | Background color of the navigation bar |
+| **Navigation Text** | Color of category links |
+| **Navigation Text Hover** | Color when hovering over a link |
 
-Similar to the top bar pages range, `eshopping-nav-pages-range` controls which **product categories** appear in the main navigation:
+### Category links
+
+The **Nav pages range** field under **Theme Styles** > **eShopping** > **Header** > **Navigation** controls which product categories appear in the navigation bar.
+
+Enter two numbers separated by a comma: the starting position and how many categories to show.
 
 ```
-start_index,limit
+start,count
 ```
 
-The default `0,6` means: starting from the first category (index 0), show up to 6 categories.
+**Example:** `0,6` means start at the first category (position 0) and show up to 6 categories.
 
-Categories are displayed in the order set in **Products > Product Categories** in your BigCommerce admin. Mega-menu dropdowns with subcategories appear on hover.
+Categories appear in the order you have set in **Products > Product Categories** in the BigCommerce admin. When you hover over a category that has subcategories, a dropdown menu appears automatically.
 
-<div class="placeholder-screenshot">Main navigation bar showing the logo on the left, six category links in the center, and search/account/cart icons on the right.</div>
-
-### Sticky behavior
-
-Both the top bar and main navigation are sticky:
-
-- **Top bar** sticks at `top: 0` (always visible at the very top)
-- **Main navigation** sticks at `top: 54px` (directly below the top bar)
-
-Together they occupy 106px of vertical space when scrolling. On mobile, the layout collapses to a hamburger menu.
-
-### How to configure
+### How to configure the navigation
 
 1. Open the **Theme Editor**.
-2. Navigate to **Theme Styles > Header**.
-3. Set the **Navigation background**, **link color**, and **hover color**.
-4. Adjust **Navigation pages range** to control how many top-level categories appear.
+2. Go to **Theme Styles** > **eShopping** > **Header** > **Navigation**.
+3. Set the **Navigation Background**, **Navigation Text**, and **Navigation Text Hover** colors.
+4. Adjust the **Nav pages range** to control how many top-level categories appear.
 5. Click **Save & Apply**.
 
 ---
 
 ## Search Bar
 
-The search bar is embedded in the main navigation and includes several advanced features.
+The search bar is built into the main navigation and includes several features to help visitors find products quickly.
 
-### Color settings
+<div class="placeholder-screenshot">Search bar with a category dropdown on the left, animated typing placeholder in the center, and a voice search microphone icon on the right.</div>
 
-| Setting | Location | Default | Purpose |
-|---------|----------|---------|---------|
-| `eshopping-nav-search-bg` | Theme Styles > Header | `#f5f0ea` | Search input background |
-| `eshopping-nav-search-color` | Theme Styles > Header | `#3d352c` | Search input text color |
-| `eshopping-nav-search-btn` | Theme Styles > Header | `#c75a2a` | Search button color |
+### Search bar colors
 
-### Animated typing placeholder
+Go to **Theme Styles** > **eShopping** > **Header** > **Navigation**:
 
-| Setting | Location | Default |
-|---------|----------|---------|
-| `eshopping-search-typing-phrases` | Theme Styles > Header | Pipe-separated phrases |
-
-The search bar displays animated placeholder text that cycles through phrases, guiding visitors on what to search for.
-
-**Format:**
-
-```
-Phrase 1|Phrase 2|Phrase 3|Phrase 4
-```
-
-**Default value:**
-
-```
-Search for power tools...|Find welding equipment...|Browse safety gear...|Discover compressors & accessories...
-```
-
-Each phrase types out character by character, pauses, then erases before the next phrase begins.
-
-<div class="placeholder-screenshot">Search bar showing animated typing placeholder text "Search for power tools..." with a blinking cursor effect.</div>
+| Setting | What it controls |
+|---------|-----------------|
+| **Search Background** | Background color of the search input |
+| **Search Text** | Text color inside the search input |
+| **Search Button** | Color of the search button |
 
 ### Category dropdown
 
-| Setting | Location | Default | Purpose |
-|---------|----------|---------|---------|
-| `eshopping-search-category-depth` | Theme Styles > Header | `4` | Category filter depth (1--4, or off) |
+Under **Theme Styles** > **eShopping** > **Search**, the **Category dropdown depth in search** setting adds a category filter inside the search bar. Visitors can narrow their search to a specific category before searching.
 
-When enabled, a category dropdown appears inside the search bar, letting visitors narrow their search to a specific category. The depth setting controls how many levels of subcategories appear in the dropdown:
+Choose how many levels of categories to show:
 
-- **1** -- Top-level categories only
-- **2** -- Top-level + one level of subcategories
-- **3** -- Three levels deep
-- **4** -- Four levels deep (default)
+| Option | What it shows |
+|--------|--------------|
+| **Disabled** | No category dropdown |
+| **Top-level only** | Only your main categories |
+| **Two levels** | Main categories + one level of subcategories |
+| **Three levels** | Three levels deep |
+| **Four levels** | Four levels deep |
 
-Set to **off** to hide the category dropdown entirely.
+### Animated typing placeholder
+
+Under **Theme Styles** > **eShopping** > **Search**, the **Typing phrases** field lets you set animated placeholder text that cycles through suggestions in the search bar, giving visitors ideas of what to search for.
+
+Enter your phrases separated by pipe characters (`|`):
+
+```
+Search for power tools...|Find welding equipment...|Browse safety gear...|Discover compressors...
+```
+
+Each phrase types out character by character, pauses briefly, then erases before the next one begins.
 
 ### Voice search
 
-| Setting | Location | Default |
-|---------|----------|---------|
-| `eshopping-search-voice` | Theme Styles > Header | `true` |
-
-When enabled, a microphone icon appears in the search bar. Clicking it activates the browser's speech recognition API, allowing visitors to search by voice.
-
-<div class="placeholder-screenshot">Search bar with category dropdown on the left, animated placeholder text in the center, and voice search microphone icon on the right.</div>
+Under **Theme Styles** > **eShopping** > **Search**, check **Enable voice search** to show a microphone icon in the search bar. Visitors can click it to search using their voice.
 
 !!! note
-    Voice search requires browser support for the Web Speech API. It works in Chrome, Edge, and Safari. In unsupported browsers, the microphone icon is automatically hidden.
+    Voice search works in Chrome, Edge, and Safari. In browsers that do not support it, the microphone icon is automatically hidden.
 
-### How to configure
+### How to configure the search bar
 
 1. Open the **Theme Editor**.
-2. Navigate to **Theme Styles > Header**.
-3. Set the **Search background**, **text color**, and **button color**.
-4. Edit **Search typing phrases** with your pipe-separated placeholder text.
-5. Set **Search category depth** (1--4 or off).
-6. Toggle **Voice search** on or off.
-7. Click **Save & Apply**.
+2. Go to **Theme Styles** > **eShopping** > **Header** > **Navigation** for search colors.
+3. Go to **Theme Styles** > **eShopping** > **Search** for search features.
+4. Set the **Search Background**, **Search Text**, and **Search Button** colors.
+5. Edit the **Typing phrases** field with your pipe-separated placeholder text.
+6. Choose a **Category dropdown depth in search** level.
+7. Check or uncheck **Enable voice search**.
+8. Click **Save & Apply**.
 
 ---
 
 ## Sign-In Popup
 
-| Setting | Location | Default |
-|---------|----------|---------|
-| `eshopping-signin-popup` | Theme Styles > Header | `true` |
+The eShopping theme can display a sign-in popup for first-time visitors, encouraging them to log in or create an account.
 
-When enabled, guest visitors are shown a sign-in modal on their first visit, encouraging them to log in or create an account. The popup appears once per session and does not reappear after being dismissed.
+<div class="placeholder-screenshot">Sign-in popup modal overlaying the home page with email and password fields, a sign-in button, and a "Create Account" link.</div>
 
-<div class="placeholder-screenshot">Sign-in popup modal overlaying the home page with email/password fields and "Create Account" link.</div>
+The popup appears once per session and does not reappear after being dismissed.
 
 ### How to configure
 
 1. Open the **Theme Editor**.
-2. Navigate to **Theme Styles > Header**.
-3. Toggle **Sign-in popup** on or off.
+2. Go to **Theme Styles** > **eShopping** > **Header** > **Navigation**.
+3. Look for the sign-in popup toggle and check or uncheck it.
 4. Click **Save & Apply**.
 
 !!! tip
-    If your store does not require customer accounts, disable this to reduce friction for casual shoppers.
+    If your store does not require customer accounts, turn this off to reduce friction for casual shoppers.
 
 ---
 
 ## Currency Selector
 
-The currency selector appears automatically in the top bar when your store has **multiple currencies** configured.
+If your store supports multiple currencies, a currency selector automatically appears in the top bar. Visitors can click it to switch between currencies.
 
-### How to configure
+<div class="placeholder-screenshot">Top bar with a currency dropdown showing "USD", "EUR", and "GBP" options.</div>
+
+### How to set it up
 
 1. In your BigCommerce admin, go to **Settings > Currency**.
 2. Add and enable the currencies you want to support.
 3. Set exchange rates or enable automatic conversion.
 
-No theme setting is required -- the selector shows up whenever more than one currency is active.
-
-<div class="placeholder-screenshot">Top bar with a currency dropdown showing "USD", "EUR", and "GBP" options.</div>
+No theme setting is needed -- the currency selector appears automatically whenever more than one currency is active.
 
 ---
 
 ## Mobile Header
 
-On screens below 801px, the header collapses into a mobile-optimized layout:
+On smaller screens (phones and small tablets), the header automatically adapts to a mobile-friendly layout:
 
-- The **top bar** shrinks to show only essential icons
-- The **main navigation** becomes a **hamburger menu** icon
-- Tapping the hamburger opens a full-screen slide-out menu with category tree, account links, and search
-- The **search bar** moves to the top of the mobile menu
+- The **top bar** shows only essential icons.
+- The **category links** are replaced by a **hamburger menu** icon.
+- Tapping the hamburger icon opens a full-screen slide-out menu with your category tree, account links, and search bar.
+- The **search bar** moves to the top of the mobile menu for easy access.
 
-<div class="placeholder-screenshot">Mobile header showing hamburger menu icon on the left, logo in the center, and cart icon on the right.</div>
+<div class="placeholder-screenshot">Mobile header showing a hamburger menu icon on the left, the store logo in the center, and a cart icon on the right.</div>
 
-No additional settings are needed -- the mobile layout is fully responsive and adapts automatically based on viewport width.
+No additional settings are needed -- the mobile layout adapts automatically based on screen size.
+
+---
+
+## Quick Setup Checklist
+
+Here is a summary of where to find each header setting:
+
+| Area | Theme Editor Path | Key Settings |
+|------|-------------------|--------------|
+| Top Bar Colors | **eShopping** > **Header** > **Topbar** | **Topbar Background**, **Topbar Text**, **Topbar Text Hover** |
+| Top Bar Content | **eShopping** > **Header** > **Topbar** | **Show Social Icons**, **Show Address**, **Show Phone**, **Welcome Text**, **Topbar pages range** |
+| Navigation Colors | **eShopping** > **Header** > **Navigation** | **Navigation Background**, **Navigation Text**, **Navigation Text Hover** |
+| Navigation Links | **eShopping** > **Header** > **Navigation** | **Nav pages range** |
+| Search Colors | **eShopping** > **Header** > **Navigation** | **Search Background**, **Search Text**, **Search Button** |
+| Search Features | **eShopping** > **Search** | **Category dropdown depth**, **Typing phrases**, **Enable voice search** |

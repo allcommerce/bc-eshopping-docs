@@ -1,118 +1,142 @@
 # FAQs
 
-## How to disable the sign-in popup
-
-By default, the eShopping theme displays a sign-in popup that prompts visitors to log in or create an account. To disable this popup:
-
-1. Go to **Storefront** > **My Themes**
-2. Click **Customize** on the eShopping theme
-3. In the left panel, navigate to the **eShopping** section
-4. Find the setting **eshopping-signin-popup** and set it to **false**
-5. Click **Save**
-
-<div class="placeholder-screenshot">Theme Editor showing eshopping-signin-popup setting toggled to false</div>
+Answers to the most common questions about configuring the eShopping theme. All settings are found in the Theme Editor -- no coding required.
 
 ---
 
-## How to disable urgency signals (viewing count, recent orders)
+## How do I disable the sign-in popup?
 
-The theme can display urgency signals on product pages, such as "X people are viewing this" and "Last ordered Y minutes ago." To disable these:
+By default, a sign-in popup prompts visitors to log in or create an account when they click the account icon. To disable it:
 
-1. Go to **Storefront** > **My Themes**
-2. Click **Customize** on the eShopping theme
-3. In the left panel, navigate to the **eShopping** section
-4. Find the setting **eshopping-urgency-view-count** and set it to **false** to hide the viewing count
-5. Find the setting **eshopping-urgency-last-order** and set it to **false** to hide the recent order indicator
-6. Click **Save**
+1. Go to **Storefront** > **My Themes** > click **Customize** on the eShopping theme.
+2. Navigate to **Theme Styles** > **eShopping** > **Header**.
+3. Uncheck **Sign-in Popup**.
+4. Click **Save**.
 
-<div class="placeholder-screenshot">Theme Editor showing eshopping-urgency-view-count and eshopping-urgency-last-order settings toggled to false</div>
+<div class="placeholder-screenshot">Theme Editor showing the Header section with the Sign-in Popup checkbox unchecked</div>
 
 ---
 
-## How to disable recent sales notifications
+## How do I disable urgency signals (viewing count, recent orders)?
 
-The theme can show toast-style notifications about recent purchases made by other customers. To disable these notifications:
+The theme can display urgency signals on product pages, such as "X people are viewing this" and "Last ordered Y hours ago." To disable them:
 
-1. Go to **Storefront** > **My Themes**
-2. Click **Customize** on the eShopping theme
-3. In the left panel, navigate to the **eShopping** section
-4. Find the setting **eshopping-recent-sales-pages** and set the value to **none**
-5. Click **Save**
+1. Go to **Storefront** > **My Themes** > click **Customize** on the eShopping theme.
+2. Navigate to **Theme Styles** > **eShopping** > **Urgency Signals (Social Proof)**.
+3. Uncheck **Show live view count** to hide the viewing counter.
+4. Uncheck **Show last order time** to hide the recent order indicator.
+5. Click **Save**.
 
-When set to "none," the recent sales notification will not appear on any page.
-
-<div class="placeholder-screenshot">Theme Editor showing eshopping-recent-sales-pages setting with value "none"</div>
+<div class="placeholder-screenshot">Theme Editor showing the Urgency Signals section with both checkboxes unchecked</div>
 
 ---
 
-## How to change the cart goal tiers
+## How do I disable recent sales notifications?
 
-The cart goal progress bar encourages shoppers to add more items to their cart to unlock rewards such as free shipping or a free gift. To customize the goal tiers:
+The theme can show toast-style notifications about recent purchases made by other customers. To turn them off:
 
-1. Go to **Storefront** > **My Themes**
-2. Click **Customize** on the eShopping theme
-3. In the left panel, navigate to the **eShopping** section
-4. Find the setting **eshopping-cart-goal-items**
-5. Edit the value using the pipe-separated format: `AMOUNT|TYPE|LABEL`
+1. Go to **Storefront** > **My Themes** > click **Customize** on the eShopping theme.
+2. Navigate to **Theme Styles** > **eShopping** > **Recent Sales Popup**.
+3. Set **Show on pages** to **Off -- don't show**.
+4. Click **Save**.
 
-**Format explanation:**
+<div class="placeholder-screenshot">Theme Editor showing the Recent Sales Popup section with Show on pages set to Off</div>
 
-- **AMOUNT** -- the dollar amount the customer must reach
-- **TYPE** -- the reward type (e.g., `shipping` for free shipping, `gift` for a free gift)
-- **LABEL** -- the display text shown to the customer
+---
 
-**Example value:**
+## How do I change the cart goal tiers?
+
+The cart goal progress bar encourages shoppers to spend more by showing reward milestones like free shipping or a free gift. To customize the tiers:
+
+1. Go to **Storefront** > **My Themes** > click **Customize** on the eShopping theme.
+2. Navigate to **Theme Styles** > **eShopping** > **Cart Goal Bar**.
+3. Edit the **Goal items** field.
+
+The format is `amount|icon|label` with each tier separated by a comma. For example:
 
 ```
-50|shipping|Free Shipping|100|gift|Free Gift
+50|shipping|Free Shipping,100|discount|10% Off,150|gift|Free Gift
 ```
 
-This creates two tiers:
+This creates three tiers:
 
 - Spend $50 to unlock **Free Shipping**
-- Spend $100 to unlock a **Free Gift**
+- Spend $100 to unlock **10% Off**
+- Spend $150 to unlock a **Free Gift**
 
-6. Click **Save**
+4. Click **Save**.
 
-<div class="placeholder-screenshot">Theme Editor showing eshopping-cart-goal-items setting with pipe-separated tier values</div>
-
----
-
-## How to disable popups
-
-The eShopping theme supports several popup types including newsletter signup, promotional banners, and exit-intent overlays. Each popup has a delay setting that controls how long to wait before displaying. To disable a popup, set its delay to **0**:
-
-1. Go to **Storefront** > **My Themes**
-2. Click **Customize** on the eShopping theme
-3. In the left panel, navigate to the **eShopping** section
-4. Find the delay setting for the popup you want to disable (e.g., **eshopping-popup-newsletter-delay**, **eshopping-popup-promo-delay**, **eshopping-popup-exit-delay**)
-5. Set the delay value to **0**
-6. Click **Save**
-
-A delay of 0 prevents the popup from appearing.
-
-<div class="placeholder-screenshot">Theme Editor showing popup delay settings set to 0 to disable popups</div>
+<div class="placeholder-screenshot">Theme Editor showing the Cart Goal Bar section with Goal items field filled in with example tier values</div>
 
 ---
 
-## How to add custom trust strip items
+## How do I disable popups (newsletter, promotion, exit intent)?
 
-The trust strip displays a row of trust badges (such as "Free Shipping," "Secure Payment," or "30-Day Returns") below the header or on product pages. To customize the trust strip items:
+The eShopping theme supports three popup types: **Newsletter Popup**, **Promotion Popup**, and **Exit Intent Popup**. To disable any popup, clear its content field:
 
-1. Go to **Storefront** > **My Themes**
-2. Click **Customize** on the eShopping theme
-3. In the left panel, navigate to the **eShopping** section
-4. Find the setting **eshopping-trust-text**
-5. Edit the value using the pipe-separated format, where each item is separated by a `|` character
+1. Go to **Storefront** > **My Themes** > click **Customize** on the eShopping theme.
+2. Navigate to **Theme Styles** > **eShopping**.
+3. Scroll to the popup section you want to disable:
+    - **Newsletter Popup** -- clear the **Newsletter Content** field
+    - **Promotion Popup** -- clear the **Promo Content** field
+    - **Exit Intent Popup** -- clear the **Exit Content** field
+4. Click **Save**.
 
-**Example value:**
+When the content field is empty, that popup will not appear on your store.
+
+<div class="placeholder-screenshot">Theme Editor showing the Newsletter Popup section with the content field cleared to disable it</div>
+
+---
+
+## How do I customize the trust strip?
+
+The trust strip displays a row of trust badges (such as "Free Shipping" or "Secure Payment") across your store. To customize the badges:
+
+1. Go to **Storefront** > **My Themes** > click **Customize** on the eShopping theme.
+2. Navigate to **Theme Styles** > **eShopping** > **Trust Strip**.
+3. Edit the **Trust Strip Items** field.
+
+Enter pairs of `Label|Subtitle` separated by pipes. Four pairs will display four badges. For example:
 
 ```
-Free Shipping on Orders $50+|Secure Checkout|30-Day Returns|24/7 Support
+Free Shipping|On orders $50+|Secure Checkout|256-bit SSL|Easy Returns|30-day policy|24/7 Support|We're here to help
 ```
 
-This creates four trust badges displayed in a row across the strip.
+This creates four trust badges:
 
-6. Click **Save**
+| Badge | Label | Subtitle |
+|-------|-------|----------|
+| 1 | Free Shipping | On orders $50+ |
+| 2 | Secure Checkout | 256-bit SSL |
+| 3 | Easy Returns | 30-day policy |
+| 4 | 24/7 Support | We're here to help |
 
-<div class="placeholder-screenshot">Theme Editor showing eshopping-trust-text setting with pipe-separated trust badge labels</div>
+4. Click **Save**.
+
+<div class="placeholder-screenshot">Theme Editor showing the Trust Strip section with Trust Strip Items field filled in with example badge values</div>
+
+---
+
+## How do I change the footer brands count?
+
+To control how many brand logos appear in the footer:
+
+1. Go to **Storefront** > **My Themes** > click **Customize** on the eShopping theme.
+2. Navigate to **Theme Styles** > **General**.
+3. Find the **Footer Brands Limit** setting and enter the number of brands you want to display.
+4. Click **Save**.
+
+<div class="placeholder-screenshot">Theme Styles > General panel with the Footer Brands Limit setting highlighted</div>
+
+---
+
+## How do I change products per page on category pages?
+
+To set how many products appear on each category page:
+
+1. Go to **Storefront** > **My Themes** > click **Customize** on the eShopping theme.
+2. Navigate to **Theme Styles** > **Products**.
+3. Under **Number of products displayed**, set the **Category page** count to your preferred number.
+4. Click **Save**.
+
+<div class="placeholder-screenshot">Theme Styles > Products panel showing the Category page products count setting</div>

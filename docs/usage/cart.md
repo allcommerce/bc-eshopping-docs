@@ -1,10 +1,12 @@
 # Customizing the Cart
 
-The eShopping theme provides two cart experiences: a **Cart Drawer** (mini cart) that slides in from the right for quick access, and a full **Cart Page** at `/cart` for detailed order review. Both include support for a goal progress bar, cross-sell recommendations, coupon codes, shipping estimation, and gift certificates.
+The eShopping theme gives your customers two ways to manage their cart: a **Cart Drawer** that slides in from the right for quick access, and a full **Cart Page** at `/cart` for detailed order review. Both include a goal progress bar, cross-sell recommendations, coupon codes, shipping estimation, and gift certificates.
+
+---
 
 ## Cart Drawer (Mini Cart)
 
-The cart drawer is a slide-out panel that appears from the right side of the screen. It opens automatically when a product is added to the cart, or when the user clicks the cart icon in the header.
+The cart drawer is a slide-out panel that appears from the right side of the screen. It opens automatically when a product is added to the cart, or when the customer clicks the cart icon in the header.
 
 <div class="placeholder-screenshot">Cart drawer open on the right side of the screen showing line items, quantity controls, subtotal, and checkout button</div>
 
@@ -17,9 +19,11 @@ The cart drawer displays:
 - **Checkout button** to proceed directly to checkout
 - **View Cart link** to navigate to the full cart page
 
-At the bottom of the cart drawer, a **cross-sell section** displays product recommendations based on items in the cart. See [Cross-Sell Recommendations](cross-sell.md) for configuration details.
+At the bottom of the cart drawer, a **cross-sell section** displays product recommendations based on items in the cart. See [Cross-Sell Recommendations](cross-sell.md) for details on how to set this up.
 
 <div class="placeholder-screenshot">Cart drawer scrolled to bottom showing the cross-sell "You May Also Like" product row</div>
+
+---
 
 ## Cart Goal Progress Bar
 
@@ -27,23 +31,32 @@ The cart goal progress bar encourages customers to add more items by showing vis
 
 <div class="placeholder-screenshot">Cart goal progress bar showing three milestones -- Free Shipping at $50, 10% Off at $100, Free Gift at $150 -- with progress filled to the current cart subtotal</div>
 
-### Configuration
+### How It Works
 
-The progress bar is configured with a single setting:
+- The progress bar fills proportionally as the cart subtotal increases toward each milestone
+- When a milestone is reached, it is highlighted with a checkmark
+- A message above the bar tells the customer how much more they need to spend to reach the next milestone (e.g., "Spend $12.50 more for Free Shipping!")
+- The bar updates dynamically when items are added or removed -- no page reload required
 
-| Setting | Value |
-|---------|-------|
-| `eshopping-cart-goal-items` | Pipe-and-comma separated tier list |
+### Setting Up Goal Milestones
 
-**Format:** `AMOUNT|TYPE|LABEL,AMOUNT|TYPE|LABEL,...`
+To configure the progress bar, go to **Theme Styles** > **eShopping** > **Cart Goal Bar** and find the **Goal items** setting.
 
-Each tier consists of three parts separated by pipes (`|`):
+Enter your milestones in this format:
 
-- **AMOUNT** -- the cart subtotal threshold (in your store's currency)
-- **TYPE** -- the reward type icon: `shipping`, `discount`, or `gift`
-- **LABEL** -- the text displayed on the milestone marker
+```
+amount|icon|label
+```
 
-**Default value:**
+Separate multiple milestones with commas. The three parts of each milestone are:
+
+| Part | Description | Allowed values |
+|------|-------------|----------------|
+| **Amount** | The cart subtotal threshold (in your store's currency) | Any number (e.g., `50`, `100`, `150`) |
+| **Icon** | The icon displayed on the milestone marker | `shipping`, `discount`, or `gift` |
+| **Label** | The text shown on the milestone | Any text (e.g., `Free Shipping`) |
+
+**Example:**
 
 ```
 50|shipping|Free Shipping,100|discount|10% Off,150|gift|Free Gift
@@ -55,14 +68,9 @@ This creates three milestones:
 2. **$100** -- 10% Off (discount tag icon)
 3. **$150** -- Free Gift (gift box icon)
 
-### How It Works
+To disable the progress bar entirely, clear the **Goal items** field.
 
-- The progress bar fills proportionally as the cart subtotal increases toward each milestone
-- When a milestone is reached, it is highlighted with a checkmark
-- A message above the bar tells the customer how much more they need to spend to reach the next milestone (e.g., "Spend $12.50 more for Free Shipping!")
-- The bar updates dynamically when items are added or removed -- no page reload required
-
-### Preset Variations
+### Theme Preset Defaults
 
 Each theme preset ships with different goal amounts tailored to its industry:
 
@@ -74,7 +82,9 @@ Each theme preset ships with different goal amounts tailored to its industry:
 | Electronics | $30 / $75 / $150 |
 
 !!! tip
-    Set the amounts to match your store's actual promotions. If you offer free shipping at $75, set the first tier to `75|shipping|Free Shipping`. The progress bar is purely visual -- you must also configure matching promotions in **Marketing** > **Promotions** for the rewards to actually apply at checkout.
+    Set the amounts to match your store's actual promotions. If you offer free shipping at $75, set the first milestone to `75|shipping|Free Shipping`. The progress bar is purely visual -- you must also configure matching promotions in **Marketing** > **Promotions** in your BigCommerce admin for the rewards to actually apply at checkout.
+
+---
 
 ## Cart Page
 
@@ -143,7 +153,9 @@ The order summary sidebar shows a breakdown of the order:
 
 <div class="placeholder-screenshot">Order summary sidebar showing subtotal, discount, shipping, tax, and grand total with a Checkout button</div>
 
-## Configuring Cart Page Promotions
+---
+
+## Making the Progress Bar Rewards Real
 
 The cart goal progress bar is a visual motivator, but the actual discounts and free shipping must be configured as real promotions in your BigCommerce admin.
 
@@ -152,7 +164,7 @@ The cart goal progress bar is a visual motivator, but the actual discounts and f
 1. Go to **Marketing** > **Promotions** in your BigCommerce admin
 2. Click **Create Promotion**
 3. Set the promotion type to **Free Shipping**
-4. Configure the minimum order amount to match your cart goal tier (e.g., $50)
+4. Configure the minimum order amount to match your cart goal milestone (e.g., $50)
 5. Optionally add a **Banner Message** that displays on the cart page
 
 ### Using Dynamic Placeholders in Banner Messages

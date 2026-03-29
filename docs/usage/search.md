@@ -1,6 +1,8 @@
 # Search Features
 
-The eShopping theme includes an enhanced search experience with live results, animated placeholder text, category filtering, voice input, and keyword suggestions. All search features are configured in the **eShopping** section of the Theme Editor.
+The eShopping theme includes an enhanced search experience with live results, animated placeholder text, category filtering, voice input, and keyword suggestions. All search features are configured in **Theme Styles** > **eShopping** > **Search**.
+
+---
 
 ## Quick Search
 
@@ -19,6 +21,8 @@ The quick search is located in the main navigation bar and provides instant resu
 
 <div class="placeholder-screenshot">Quick search dropdown with a typed query showing grouped results -- products with thumbnails, category links, and content page links</div>
 
+---
+
 ## Animated Typing Placeholder
 
 The search bar features an animated typing effect that cycles through placeholder phrases, giving customers ideas of what to search for. Each theme preset includes industry-specific phrases.
@@ -27,19 +31,21 @@ The search bar features an animated typing effect that cycles through placeholde
 
 ### Configuration
 
-| Setting | Value |
-|---------|-------|
-| `eshopping-search-typing-phrases` | Pipe-separated list of phrases |
+Go to **Theme Styles** > **eShopping** > **Search** and find the **Typing phrases** setting.
 
-**Format:** `Phrase 1|Phrase 2|Phrase 3|...`
+Enter your phrases separated by a pipe character (`|`):
 
-**Default value (Industrial preset):**
+```
+Phrase 1|Phrase 2|Phrase 3
+```
+
+**Example:**
 
 ```
 Search for power tools...|Find welding equipment...|Browse safety gear...|Discover compressors & accessories...
 ```
 
-### Preset Variations
+### Theme Preset Defaults
 
 Each preset ships with industry-relevant placeholder phrases:
 
@@ -56,10 +62,12 @@ Each preset ships with industry-relevant placeholder phrases:
 - After a phrase is fully typed, there is a brief pause before it is erased
 - The next phrase in the list then begins typing
 - The cycle repeats continuously
-- When the customer focuses the search input, the animation stops and the placeholder clears to allow typing
+- When the customer clicks into the search input, the animation stops and the placeholder clears to allow typing
 
 !!! tip
     Customize the phrases to match your store's product catalog. Use action words like "Search for," "Find," "Browse," or "Discover" to encourage engagement. Keep each phrase under 50 characters for best display on mobile devices.
+
+---
 
 ## Category Dropdown Filter
 
@@ -69,21 +77,17 @@ A category dropdown can be added next to the search input, allowing customers to
 
 ### Configuration
 
-| Setting | Value |
-|---------|-------|
-| `eshopping-search-category-depth` | `"1"`, `"2"`, `"3"`, `"4"`, or `"off"` |
+Go to **Theme Styles** > **eShopping** > **Search** and find the **Category dropdown depth in search** setting.
 
-**Default value:** `"4"`
+Choose from the following options:
 
-The depth value controls how many levels of subcategories appear in the dropdown:
-
-| Value | Behavior |
-|-------|----------|
-| `"off"` | Category dropdown is hidden; search bar spans full width |
-| `"1"` | Only top-level categories are shown |
-| `"2"` | Top-level categories and their direct subcategories |
-| `"3"` | Three levels of category nesting |
-| `"4"` | Four levels of category nesting (deepest) |
+| Option | What it does |
+|--------|--------------|
+| **Disabled** | Category dropdown is hidden; search bar spans full width |
+| **Top-level only** | Only top-level categories are shown |
+| **Two levels** | Top-level categories and their direct subcategories |
+| **Three levels** | Three levels of category nesting |
+| **Four levels** | Four levels of category nesting (deepest) |
 
 ### How It Works
 
@@ -93,7 +97,9 @@ The depth value controls how many levels of subcategories appear in the dropdown
 4. The selected category is preserved in the search results page URL
 
 !!! note
-    Subcategories are indented in the dropdown to visually indicate the hierarchy. If your store has a deeply nested category tree, consider using a depth of `"2"` or `"3"` to keep the dropdown manageable.
+    Subcategories are indented in the dropdown to visually indicate the hierarchy. If your store has a deeply nested category tree, consider using **Two levels** or **Three levels** to keep the dropdown manageable.
+
+---
 
 ## Voice Search
 
@@ -103,11 +109,7 @@ Voice search adds a microphone icon to the search bar, allowing customers to spe
 
 ### Configuration
 
-| Setting | Value |
-|---------|-------|
-| `eshopping-search-voice` | `true` or `false` |
-
-**Default value:** `true`
+Go to **Theme Styles** > **eShopping** > **Search** and check or uncheck **Enable voice search**.
 
 ### How It Works
 
@@ -119,16 +121,18 @@ Voice search adds a microphone icon to the search bar, allowing customers to spe
 
 ### Browser Support
 
-Voice search uses the browser's built-in [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API). It is supported in:
+Voice search is supported in the following browsers:
 
 - Google Chrome (desktop and Android)
 - Microsoft Edge
 - Safari (macOS and iOS)
 
-If the customer's browser does not support the Web Speech API, the microphone icon is automatically hidden and the search bar functions normally without it.
+If the customer's browser does not support voice search, the microphone icon is automatically hidden and the search bar functions normally without it.
 
 !!! warning
     Voice search requires a secure connection (HTTPS). It will not work on HTTP-only sites or during local development without SSL.
+
+---
 
 ## Keyword Suggestions
 
@@ -136,10 +140,14 @@ As customers type in the search bar, keyword suggestions appear to help them fin
 
 <div class="placeholder-screenshot">Search bar with a dropdown showing keyword suggestions below the input, such as "power drill," "power tool set," "power washer"</div>
 
+### Configuration
+
+Go to **Theme Styles** > **eShopping** > **Search** and check or uncheck **Enable keyword suggestions**.
+
 ### How It Works
 
 1. The customer begins typing in the search bar
-2. After a brief debounce delay, suggested keywords appear in a dropdown
+2. After a brief pause, suggested keywords appear in a dropdown
 3. Suggestions are ranked by relevance to the typed characters
 4. Clicking a suggestion populates the search input and submits the search
 5. The customer can also use arrow keys to navigate suggestions and press Enter to select

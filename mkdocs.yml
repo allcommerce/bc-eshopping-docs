@@ -3,6 +3,7 @@ nav:
 - Home: index.md
 - Usage Guide:
   - usage/get-started.md
+  - usage/page-builder.md
   - usage/homepage.md
   - usage/header-navigation.md
   - usage/sidebar.md

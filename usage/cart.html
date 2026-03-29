@@ -428,6 +428,8 @@
       
         
       
+        
+      
     
     
       
@@ -476,6 +478,27 @@
   
   <span class="md-ellipsis">
     Get Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="page-builder.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Page Builder with eShopping
   </span>
   
 
@@ -662,15 +685,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
       How It Works
@@ -680,9 +694,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#preset-variations" class="md-nav__link">
+  <a href="#setting-up-goal-milestones" class="md-nav__link">
     <span class="md-ellipsis">
-      Preset Variations
+      Setting Up Goal Milestones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theme-preset-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theme Preset Defaults
     </span>
   </a>
   
@@ -754,13 +777,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-cart-page-promotions" class="md-nav__link">
+  <a href="#making-the-progress-bar-rewards-real" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring Cart Page Promotions
+      Making the Progress Bar Rewards Real
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuring Cart Page Promotions">
+    <nav class="md-nav" aria-label="Making the Progress Bar Rewards Real">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1130,15 +1153,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
       How It Works
@@ -1148,9 +1162,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#preset-variations" class="md-nav__link">
+  <a href="#setting-up-goal-milestones" class="md-nav__link">
     <span class="md-ellipsis">
-      Preset Variations
+      Setting Up Goal Milestones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theme-preset-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theme Preset Defaults
     </span>
   </a>
   
@@ -1222,13 +1245,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-cart-page-promotions" class="md-nav__link">
+  <a href="#making-the-progress-bar-rewards-real" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring Cart Page Promotions
+      Making the Progress Bar Rewards Real
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuring Cart Page Promotions">
+    <nav class="md-nav" aria-label="Making the Progress Bar Rewards Real">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1270,9 +1293,10 @@
 
 
 <h1 id="customizing-the-cart">Customizing the Cart<a class="headerlink" href="#customizing-the-cart" title="Permanent link">&para;</a></h1>
-<p>The eShopping theme provides two cart experiences: a <strong>Cart Drawer</strong> (mini cart) that slides in from the right for quick access, and a full <strong>Cart Page</strong> at <code>/cart</code> for detailed order review. Both include support for a goal progress bar, cross-sell recommendations, coupon codes, shipping estimation, and gift certificates.</p>
+<p>The eShopping theme gives your customers two ways to manage their cart: a <strong>Cart Drawer</strong> that slides in from the right for quick access, and a full <strong>Cart Page</strong> at <code>/cart</code> for detailed order review. Both include a goal progress bar, cross-sell recommendations, coupon codes, shipping estimation, and gift certificates.</p>
+<hr />
 <h2 id="cart-drawer-mini-cart">Cart Drawer (Mini Cart)<a class="headerlink" href="#cart-drawer-mini-cart" title="Permanent link">&para;</a></h2>
-<p>The cart drawer is a slide-out panel that appears from the right side of the screen. It opens automatically when a product is added to the cart, or when the user clicks the cart icon in the header.</p>
+<p>The cart drawer is a slide-out panel that appears from the right side of the screen. It opens automatically when a product is added to the cart, or when the customer clicks the cart icon in the header.</p>
 <div class="placeholder-screenshot">Cart drawer open on the right side of the screen showing line items, quantity controls, subtotal, and checkout button</div>
 
 <p>The cart drawer displays:</p>
@@ -1284,45 +1308,14 @@
 <li><strong>Checkout button</strong> to proceed directly to checkout</li>
 <li><strong>View Cart link</strong> to navigate to the full cart page</li>
 </ul>
-<p>At the bottom of the cart drawer, a <strong>cross-sell section</strong> displays product recommendations based on items in the cart. See <a href="cross-sell.html">Cross-Sell Recommendations</a> for configuration details.</p>
+<p>At the bottom of the cart drawer, a <strong>cross-sell section</strong> displays product recommendations based on items in the cart. See <a href="cross-sell.html">Cross-Sell Recommendations</a> for details on how to set this up.</p>
 <div class="placeholder-screenshot">Cart drawer scrolled to bottom showing the cross-sell "You May Also Like" product row</div>
 
+<hr />
 <h2 id="cart-goal-progress-bar">Cart Goal Progress Bar<a class="headerlink" href="#cart-goal-progress-bar" title="Permanent link">&para;</a></h2>
 <p>The cart goal progress bar encourages customers to add more items by showing visual milestones for rewards like free shipping, discounts, or free gifts. It appears at the top of both the cart drawer and the cart page.</p>
 <div class="placeholder-screenshot">Cart goal progress bar showing three milestones -- Free Shipping at $50, 10% Off at $100, Free Gift at $150 -- with progress filled to the current cart subtotal</div>
 
-<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
-<p>The progress bar is configured with a single setting:</p>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>eshopping-cart-goal-items</code></td>
-<td>Pipe-and-comma separated tier list</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Format:</strong> <code>AMOUNT|TYPE|LABEL,AMOUNT|TYPE|LABEL,...</code></p>
-<p>Each tier consists of three parts separated by pipes (<code>|</code>):</p>
-<ul>
-<li><strong>AMOUNT</strong> -- the cart subtotal threshold (in your store's currency)</li>
-<li><strong>TYPE</strong> -- the reward type icon: <code>shipping</code>, <code>discount</code>, or <code>gift</code></li>
-<li><strong>LABEL</strong> -- the text displayed on the milestone marker</li>
-</ul>
-<p><strong>Default value:</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>50|shipping|Free Shipping,100|discount|10% Off,150|gift|Free Gift
-</span></code></pre></div>
-<p>This creates three milestones:</p>
-<ol>
-<li><strong>$50</strong> -- Free Shipping (shipping truck icon)</li>
-<li><strong>$100</strong> -- 10% Off (discount tag icon)</li>
-<li><strong>$150</strong> -- Free Gift (gift box icon)</li>
-</ol>
 <h3 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The progress bar fills proportionally as the cart subtotal increases toward each milestone</li>
@@ -1330,7 +1323,49 @@
 <li>A message above the bar tells the customer how much more they need to spend to reach the next milestone (e.g., "Spend $12.50 more for Free Shipping!")</li>
 <li>The bar updates dynamically when items are added or removed -- no page reload required</li>
 </ul>
-<h3 id="preset-variations">Preset Variations<a class="headerlink" href="#preset-variations" title="Permanent link">&para;</a></h3>
+<h3 id="setting-up-goal-milestones">Setting Up Goal Milestones<a class="headerlink" href="#setting-up-goal-milestones" title="Permanent link">&para;</a></h3>
+<p>To configure the progress bar, go to <strong>Theme Styles</strong> &gt; <strong>eShopping</strong> &gt; <strong>Cart Goal Bar</strong> and find the <strong>Goal items</strong> setting.</p>
+<p>Enter your milestones in this format:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>amount|icon|label
+</span></code></pre></div>
+<p>Separate multiple milestones with commas. The three parts of each milestone are:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Description</th>
+<th>Allowed values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amount</strong></td>
+<td>The cart subtotal threshold (in your store's currency)</td>
+<td>Any number (e.g., <code>50</code>, <code>100</code>, <code>150</code>)</td>
+</tr>
+<tr>
+<td><strong>Icon</strong></td>
+<td>The icon displayed on the milestone marker</td>
+<td><code>shipping</code>, <code>discount</code>, or <code>gift</code></td>
+</tr>
+<tr>
+<td><strong>Label</strong></td>
+<td>The text shown on the milestone</td>
+<td>Any text (e.g., <code>Free Shipping</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>50|shipping|Free Shipping,100|discount|10% Off,150|gift|Free Gift
+</span></code></pre></div>
+<p>This creates three milestones:</p>
+<ol>
+<li><strong>$50</strong> -- Free Shipping (shipping truck icon)</li>
+<li><strong>$100</strong> -- 10% Off (discount tag icon)</li>
+<li><strong>$150</strong> -- Free Gift (gift box icon)</li>
+</ol>
+<p>To disable the progress bar entirely, clear the <strong>Goal items</strong> field.</p>
+<h3 id="theme-preset-defaults">Theme Preset Defaults<a class="headerlink" href="#theme-preset-defaults" title="Permanent link">&para;</a></h3>
 <p>Each theme preset ships with different goal amounts tailored to its industry:</p>
 <table>
 <thead>
@@ -1360,8 +1395,9 @@
 </table>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Set the amounts to match your store's actual promotions. If you offer free shipping at $75, set the first tier to <code>75|shipping|Free Shipping</code>. The progress bar is purely visual -- you must also configure matching promotions in <strong>Marketing</strong> &gt; <strong>Promotions</strong> for the rewards to actually apply at checkout.</p>
+<p>Set the amounts to match your store's actual promotions. If you offer free shipping at $75, set the first milestone to <code>75|shipping|Free Shipping</code>. The progress bar is purely visual -- you must also configure matching promotions in <strong>Marketing</strong> &gt; <strong>Promotions</strong> in your BigCommerce admin for the rewards to actually apply at checkout.</p>
 </div>
+<hr />
 <h2 id="cart-page">Cart Page<a class="headerlink" href="#cart-page" title="Permanent link">&para;</a></h2>
 <p>The full cart page is accessible at <code>/cart</code> and provides a complete order management experience before checkout.</p>
 <div class="placeholder-screenshot">Full cart page showing line items table, coupon code input, shipping estimator, gift certificate field, and order summary sidebar</div>
@@ -1422,19 +1458,20 @@
 </ul>
 <div class="placeholder-screenshot">Order summary sidebar showing subtotal, discount, shipping, tax, and grand total with a Checkout button</div>
 
-<h2 id="configuring-cart-page-promotions">Configuring Cart Page Promotions<a class="headerlink" href="#configuring-cart-page-promotions" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="making-the-progress-bar-rewards-real">Making the Progress Bar Rewards Real<a class="headerlink" href="#making-the-progress-bar-rewards-real" title="Permanent link">&para;</a></h2>
 <p>The cart goal progress bar is a visual motivator, but the actual discounts and free shipping must be configured as real promotions in your BigCommerce admin.</p>
 <h3 id="creating-a-free-shipping-promotion">Creating a Free Shipping Promotion<a class="headerlink" href="#creating-a-free-shipping-promotion" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Go to <strong>Marketing</strong> &gt; <strong>Promotions</strong> in your BigCommerce admin</li>
 <li>Click <strong>Create Promotion</strong></li>
 <li>Set the promotion type to <strong>Free Shipping</strong></li>
-<li>Configure the minimum order amount to match your cart goal tier (e.g., $50)</li>
+<li>Configure the minimum order amount to match your cart goal milestone (e.g., $50)</li>
 <li>Optionally add a <strong>Banner Message</strong> that displays on the cart page</li>
 </ol>
 <h3 id="using-dynamic-placeholders-in-banner-messages">Using Dynamic Placeholders in Banner Messages<a class="headerlink" href="#using-dynamic-placeholders-in-banner-messages" title="Permanent link">&para;</a></h3>
 <p>BigCommerce promotion banners support dynamic placeholders. Use <code>%%condition.remaining%%</code> to show the customer how much more they need to spend:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Spend %%condition.remaining%% more to get FREE SHIPPING!
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Spend %%condition.remaining%% more to get FREE SHIPPING!
 </span></code></pre></div>
 <p>This message automatically updates based on the customer's current cart subtotal and disappears once the threshold is met.</p>
 <div class="admonition note">

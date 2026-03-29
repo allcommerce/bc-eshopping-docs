@@ -428,6 +428,8 @@
       
         
       
+        
+      
     
     
       
@@ -476,6 +478,27 @@
   
   <span class="md-ellipsis">
     Get Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="page-builder.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Page Builder with eShopping
   </span>
   
 
@@ -727,16 +750,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#you-may-also-like-cart-cross-sell" class="md-nav__link">
+  <a href="#where-cross-sell-appears" class="md-nav__link">
     <span class="md-ellipsis">
-      You May Also Like (Cart Cross-sell)
+      Where Cross-Sell Appears
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="You May Also Like (Cart Cross-sell)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration
@@ -744,15 +766,16 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
       How It Works
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="How It Works">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#product-cards" class="md-nav__link">
@@ -772,17 +795,17 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#setting-up-related-products" class="md-nav__link">
     <span class="md-ellipsis">
       Setting Up Related Products
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1027,16 +1050,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#you-may-also-like-cart-cross-sell" class="md-nav__link">
+  <a href="#where-cross-sell-appears" class="md-nav__link">
     <span class="md-ellipsis">
-      You May Also Like (Cart Cross-sell)
+      Where Cross-Sell Appears
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="You May Also Like (Cart Cross-sell)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration
@@ -1044,15 +1066,16 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
       How It Works
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="How It Works">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#product-cards" class="md-nav__link">
@@ -1072,17 +1095,17 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#setting-up-related-products" class="md-nav__link">
     <span class="md-ellipsis">
       Setting Up Related Products
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1103,66 +1126,37 @@
 
 <h1 id="cross-sell-recommendations">Cross-Sell Recommendations<a class="headerlink" href="#cross-sell-recommendations" title="Permanent link">&para;</a></h1>
 <p>The eShopping theme includes a built-in cross-sell feature that displays "You May Also Like" product recommendations in the cart. These recommendations are automatically generated based on the products already in the customer's cart, encouraging additional purchases without requiring any third-party apps.</p>
-<h2 id="you-may-also-like-cart-cross-sell">You May Also Like (Cart Cross-sell)<a class="headerlink" href="#you-may-also-like-cart-cross-sell" title="Permanent link">&para;</a></h2>
-<p>The cross-sell section appears in both the <strong>cart drawer</strong> and the <strong>cart page</strong>, showing a horizontal scrollable row of related product cards.</p>
+<hr />
+<h2 id="where-cross-sell-appears">Where Cross-Sell Appears<a class="headerlink" href="#where-cross-sell-appears" title="Permanent link">&para;</a></h2>
+<p>The cross-sell section appears in both the <strong>cart drawer</strong> (mini cart) and the <strong>cart page</strong>, showing a horizontal scrollable row of related product cards.</p>
 <div class="placeholder-screenshot">Cart drawer with the "You May Also Like" cross-sell section at the bottom showing a horizontal row of product cards with images, names, prices, and Add to Cart buttons</div>
 
 <div class="placeholder-screenshot">Cart page with the "You May Also Like" cross-sell section below the line items showing a wider row of product cards</div>
 
-<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>eshopping-crosssell-count</code></td>
-<td><code>"DESKTOP,MOBILE"</code></td>
-<td>Number of products to display</td>
-</tr>
-<tr>
-<td><code>eshopping-crosssell-img-width</code></td>
-<td>Integer (pixels)</td>
-<td>Product card image width</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Default values:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>eshopping-crosssell-count</code></td>
-<td><code>"6,4"</code></td>
-</tr>
-<tr>
-<td><code>eshopping-crosssell-img-width</code></td>
-<td><code>240</code></td>
-</tr>
-</tbody>
-</table>
-<p>The count setting uses a comma-separated pair: the first number is the maximum products shown on <strong>desktop</strong>, the second is the maximum on <strong>mobile</strong>.</p>
-<h3 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
-<p>The cross-sell engine uses the following logic to select recommendations:</p>
+<hr />
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<p>Go to <strong>Theme Styles</strong> &gt; <strong>eShopping</strong> &gt; <strong>Cart Cross-sell</strong> and find the <strong>Cross-sell products</strong> setting.</p>
+<p>This setting controls how many products are displayed in the cart drawer and on the cart page. Enter two numbers separated by a comma:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cart_page_count,cart_drawer_count
+</span></code></pre></div>
+<p><strong>Example:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>6,4
+</span></code></pre></div>
+<p>This means: show up to <strong>6</strong> cross-sell products on the cart page, and up to <strong>4</strong> in the cart drawer.</p>
+<p>To disable cross-sell recommendations entirely, set this value to <code>0</code>.</p>
+<hr />
+<h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<p>The cross-sell engine selects recommendations using the following logic:</p>
 <ol>
-<li><strong>Fetch related products</strong> -- For each product in the cart, the theme retrieves its related products (configured in BigCommerce under each product's settings)</li>
-<li><strong>Rank by frequency</strong> -- Products that appear as related to <strong>multiple</strong> cart items are ranked higher, since they are more broadly relevant to the customer's interests</li>
-<li><strong>Exclude cart items</strong> -- Any product already in the cart is automatically excluded from the recommendations to avoid redundant suggestions</li>
-<li><strong>Limit results</strong> -- The list is trimmed to the configured count for the current device (desktop or mobile)</li>
+<li><strong>Fetches related products</strong> -- For each product in the cart, the theme retrieves its related products (configured in BigCommerce under each product's settings)</li>
+<li><strong>Ranks by relevance</strong> -- Products that appear as related to <strong>multiple</strong> cart items are ranked higher, since they are more broadly relevant to the customer's interests</li>
+<li><strong>Excludes cart items</strong> -- Any product already in the cart is automatically excluded from the recommendations</li>
+<li><strong>Limits results</strong> -- The list is trimmed to the configured count</li>
 </ol>
 <h3 id="product-cards">Product Cards<a class="headerlink" href="#product-cards" title="Permanent link">&para;</a></h3>
 <p>Each cross-sell product card displays:</p>
 <ul>
-<li><strong>Product image</strong> at the configured width</li>
+<li><strong>Product image</strong></li>
 <li><strong>Product name</strong> (linked to the product page)</li>
 <li><strong>Price</strong> (sale price shown if applicable)</li>
 <li><strong>Add to Cart button</strong> for quick one-click adding</li>
@@ -1171,34 +1165,31 @@
 
 <p>When a customer clicks <strong>Add to Cart</strong> on a cross-sell product:</p>
 <ol>
-<li>The product is added to the cart via AJAX (no page reload)</li>
+<li>The product is added to the cart instantly (no page reload)</li>
 <li>The cart drawer updates to show the new item</li>
-<li>The cross-sell section refreshes to exclude the newly added product and potentially show new recommendations</li>
+<li>The cross-sell section refreshes to exclude the newly added product and may show new recommendations</li>
 </ol>
 <h3 id="responsive-behavior">Responsive Behavior<a class="headerlink" href="#responsive-behavior" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th>Viewport</th>
-<th>Products Shown</th>
 <th>Layout</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Desktop (1024px+)</td>
-<td>Up to 6 (configurable)</td>
+<td><strong>Desktop</strong> (1024px and above)</td>
 <td>Horizontal scrollable row with left/right navigation arrows</td>
 </tr>
 <tr>
-<td>Mobile (below 1024px)</td>
-<td>Up to 4 (configurable)</td>
+<td><strong>Mobile</strong> (below 1024px)</td>
 <td>Horizontal scrollable row with swipe navigation</td>
 </tr>
 </tbody>
 </table>
-<p>The product cards maintain consistent sizing across viewports, with the image width controlled by the <code>eshopping-crosssell-img-width</code> setting.</p>
-<h3 id="setting-up-related-products">Setting Up Related Products<a class="headerlink" href="#setting-up-related-products" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="setting-up-related-products">Setting Up Related Products<a class="headerlink" href="#setting-up-related-products" title="Permanent link">&para;</a></h2>
 <p>For cross-sell recommendations to appear, your products must have <strong>related products</strong> configured in BigCommerce:</p>
 <ol>
 <li>Go to <strong>Products</strong> in your BigCommerce admin</li>
@@ -1206,10 +1197,11 @@
 <li>Scroll to the <strong>Related Products</strong> section</li>
 <li>Add products that complement the current product</li>
 <li>Save the product</li>
+<li>Repeat for other products in your catalog</li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>For the best cross-sell experience, ensure every product in your catalog has at least 3-5 related products configured. Products without related products will not contribute recommendations to the cross-sell section.</p>
+<p>For the best cross-sell experience, ensure every product in your catalog has at least 3--5 related products configured. Think about what a customer would naturally want to buy together -- for example, a phone case and screen protector for a phone, or matching accessories for an outfit.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

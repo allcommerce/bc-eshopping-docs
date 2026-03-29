@@ -428,6 +428,8 @@
       
         
       
+        
+      
     
     
       
@@ -476,6 +478,27 @@
   
   <span class="md-ellipsis">
     Get Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="page-builder.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Page Builder with eShopping
   </span>
   
 
@@ -707,9 +730,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#preset-variations" class="md-nav__link">
+  <a href="#theme-preset-defaults" class="md-nav__link">
     <span class="md-ellipsis">
-      Preset Variations
+      Theme Preset Defaults
     </span>
   </a>
   
@@ -813,6 +836,15 @@
   
     <nav class="md-nav" aria-label="Keyword Suggestions">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#how-it-works_3" class="md-nav__link">
@@ -1175,9 +1207,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#preset-variations" class="md-nav__link">
+  <a href="#theme-preset-defaults" class="md-nav__link">
     <span class="md-ellipsis">
-      Preset Variations
+      Theme Preset Defaults
     </span>
   </a>
   
@@ -1283,6 +1315,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#configuration_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#how-it-works_3" class="md-nav__link">
     <span class="md-ellipsis">
       How It Works
@@ -1312,7 +1353,8 @@
 
 
 <h1 id="search-features">Search Features<a class="headerlink" href="#search-features" title="Permanent link">&para;</a></h1>
-<p>The eShopping theme includes an enhanced search experience with live results, animated placeholder text, category filtering, voice input, and keyword suggestions. All search features are configured in the <strong>eShopping</strong> section of the Theme Editor.</p>
+<p>The eShopping theme includes an enhanced search experience with live results, animated placeholder text, category filtering, voice input, and keyword suggestions. All search features are configured in <strong>Theme Styles</strong> &gt; <strong>eShopping</strong> &gt; <strong>Search</strong>.</p>
+<hr />
 <h2 id="quick-search">Quick Search<a class="headerlink" href="#quick-search" title="Permanent link">&para;</a></h2>
 <p>The quick search is located in the main navigation bar and provides instant results as the customer types. It searches across products, categories, and content pages simultaneously.</p>
 <div class="placeholder-screenshot">Quick search dropdown open below the navigation bar showing product results, category matches, and content page results</div>
@@ -1328,30 +1370,20 @@
 </ol>
 <div class="placeholder-screenshot">Quick search dropdown with a typed query showing grouped results -- products with thumbnails, category links, and content page links</div>
 
+<hr />
 <h2 id="animated-typing-placeholder">Animated Typing Placeholder<a class="headerlink" href="#animated-typing-placeholder" title="Permanent link">&para;</a></h2>
 <p>The search bar features an animated typing effect that cycles through placeholder phrases, giving customers ideas of what to search for. Each theme preset includes industry-specific phrases.</p>
 <div class="placeholder-screenshot">Search bar in the navigation showing an animated typing placeholder mid-phrase, e.g. "Search for power too" with a blinking cursor</div>
 
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>eshopping-search-typing-phrases</code></td>
-<td>Pipe-separated list of phrases</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Format:</strong> <code>Phrase 1|Phrase 2|Phrase 3|...</code></p>
-<p><strong>Default value (Industrial preset):</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Search for power tools...|Find welding equipment...|Browse safety gear...|Discover compressors &amp; accessories...
+<p>Go to <strong>Theme Styles</strong> &gt; <strong>eShopping</strong> &gt; <strong>Search</strong> and find the <strong>Typing phrases</strong> setting.</p>
+<p>Enter your phrases separated by a pipe character (<code>|</code>):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Phrase 1|Phrase 2|Phrase 3
 </span></code></pre></div>
-<h3 id="preset-variations">Preset Variations<a class="headerlink" href="#preset-variations" title="Permanent link">&para;</a></h3>
+<p><strong>Example:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Search for power tools...|Find welding equipment...|Browse safety gear...|Discover compressors &amp; accessories...
+</span></code></pre></div>
+<h3 id="theme-preset-defaults">Theme Preset Defaults<a class="headerlink" href="#theme-preset-defaults" title="Permanent link">&para;</a></h3>
 <p>Each preset ships with industry-relevant placeholder phrases:</p>
 <table>
 <thead>
@@ -1385,59 +1417,46 @@
 <li>After a phrase is fully typed, there is a brief pause before it is erased</li>
 <li>The next phrase in the list then begins typing</li>
 <li>The cycle repeats continuously</li>
-<li>When the customer focuses the search input, the animation stops and the placeholder clears to allow typing</li>
+<li>When the customer clicks into the search input, the animation stops and the placeholder clears to allow typing</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Customize the phrases to match your store's product catalog. Use action words like "Search for," "Find," "Browse," or "Discover" to encourage engagement. Keep each phrase under 50 characters for best display on mobile devices.</p>
 </div>
+<hr />
 <h2 id="category-dropdown-filter">Category Dropdown Filter<a class="headerlink" href="#category-dropdown-filter" title="Permanent link">&para;</a></h2>
 <p>A category dropdown can be added next to the search input, allowing customers to narrow their search to a specific category before submitting.</p>
 <div class="placeholder-screenshot">Search bar with a category dropdown selector on the left side showing "All Categories" expanded with a list of top-level and subcategories</div>
 
 <h3 id="configuration_1">Configuration<a class="headerlink" href="#configuration_1" title="Permanent link">&para;</a></h3>
+<p>Go to <strong>Theme Styles</strong> &gt; <strong>eShopping</strong> &gt; <strong>Search</strong> and find the <strong>Category dropdown depth in search</strong> setting.</p>
+<p>Choose from the following options:</p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Value</th>
+<th>Option</th>
+<th>What it does</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>eshopping-search-category-depth</code></td>
-<td><code>"1"</code>, <code>"2"</code>, <code>"3"</code>, <code>"4"</code>, or <code>"off"</code></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Default value:</strong> <code>"4"</code></p>
-<p>The depth value controls how many levels of subcategories appear in the dropdown:</p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Behavior</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>"off"</code></td>
+<td><strong>Disabled</strong></td>
 <td>Category dropdown is hidden; search bar spans full width</td>
 </tr>
 <tr>
-<td><code>"1"</code></td>
+<td><strong>Top-level only</strong></td>
 <td>Only top-level categories are shown</td>
 </tr>
 <tr>
-<td><code>"2"</code></td>
+<td><strong>Two levels</strong></td>
 <td>Top-level categories and their direct subcategories</td>
 </tr>
 <tr>
-<td><code>"3"</code></td>
+<td><strong>Three levels</strong></td>
 <td>Three levels of category nesting</td>
 </tr>
 <tr>
-<td><code>"4"</code></td>
+<td><strong>Four levels</strong></td>
 <td>Four levels of category nesting (deepest)</td>
 </tr>
 </tbody>
@@ -1451,28 +1470,15 @@
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Subcategories are indented in the dropdown to visually indicate the hierarchy. If your store has a deeply nested category tree, consider using a depth of <code>"2"</code> or <code>"3"</code> to keep the dropdown manageable.</p>
+<p>Subcategories are indented in the dropdown to visually indicate the hierarchy. If your store has a deeply nested category tree, consider using <strong>Two levels</strong> or <strong>Three levels</strong> to keep the dropdown manageable.</p>
 </div>
+<hr />
 <h2 id="voice-search">Voice Search<a class="headerlink" href="#voice-search" title="Permanent link">&para;</a></h2>
 <p>Voice search adds a microphone icon to the search bar, allowing customers to speak their search query instead of typing.</p>
 <div class="placeholder-screenshot">Search bar with a microphone icon on the right side, shown in both inactive and active (listening) states</div>
 
 <h3 id="configuration_2">Configuration<a class="headerlink" href="#configuration_2" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>eshopping-search-voice</code></td>
-<td><code>true</code> or <code>false</code></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Default value:</strong> <code>true</code></p>
+<p>Go to <strong>Theme Styles</strong> &gt; <strong>eShopping</strong> &gt; <strong>Search</strong> and check or uncheck <strong>Enable voice search</strong>.</p>
 <h3 id="how-it-works_2">How It Works<a class="headerlink" href="#how-it-works_2" title="Permanent link">&para;</a></h3>
 <ol>
 <li>The customer clicks the microphone icon in the search bar</li>
@@ -1482,25 +1488,28 @@
 <li>The search is automatically submitted after the speech is recognized</li>
 </ol>
 <h3 id="browser-support">Browser Support<a class="headerlink" href="#browser-support" title="Permanent link">&para;</a></h3>
-<p>Voice search uses the browser's built-in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a>. It is supported in:</p>
+<p>Voice search is supported in the following browsers:</p>
 <ul>
 <li>Google Chrome (desktop and Android)</li>
 <li>Microsoft Edge</li>
 <li>Safari (macOS and iOS)</li>
 </ul>
-<p>If the customer's browser does not support the Web Speech API, the microphone icon is automatically hidden and the search bar functions normally without it.</p>
+<p>If the customer's browser does not support voice search, the microphone icon is automatically hidden and the search bar functions normally without it.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Voice search requires a secure connection (HTTPS). It will not work on HTTP-only sites or during local development without SSL.</p>
 </div>
+<hr />
 <h2 id="keyword-suggestions">Keyword Suggestions<a class="headerlink" href="#keyword-suggestions" title="Permanent link">&para;</a></h2>
 <p>As customers type in the search bar, keyword suggestions appear to help them find products faster. These suggestions are based on popular search terms and product names.</p>
 <div class="placeholder-screenshot">Search bar with a dropdown showing keyword suggestions below the input, such as "power drill," "power tool set," "power washer"</div>
 
+<h3 id="configuration_3">Configuration<a class="headerlink" href="#configuration_3" title="Permanent link">&para;</a></h3>
+<p>Go to <strong>Theme Styles</strong> &gt; <strong>eShopping</strong> &gt; <strong>Search</strong> and check or uncheck <strong>Enable keyword suggestions</strong>.</p>
 <h3 id="how-it-works_3">How It Works<a class="headerlink" href="#how-it-works_3" title="Permanent link">&para;</a></h3>
 <ol>
 <li>The customer begins typing in the search bar</li>
-<li>After a brief debounce delay, suggested keywords appear in a dropdown</li>
+<li>After a brief pause, suggested keywords appear in a dropdown</li>
 <li>Suggestions are ranked by relevance to the typed characters</li>
 <li>Clicking a suggestion populates the search input and submits the search</li>
 <li>The customer can also use arrow keys to navigate suggestions and press Enter to select</li>
